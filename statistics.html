@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bezawada Car Rentals - Statistics & Trust Highlights</title>
+
+    <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="statistics.css">
+</head>
+
+<body>
+
+    <section class="stats-section">
+
+        <div class="stats-header">
+            <span class="stats-badge">TRUSTED BY THOUSANDS</span>
+            <h1>Andhra's Leading Self-Drive Car Rental Platform</h1>
+            <p class="stats-subheading">Powering seamless road trips across Vijayawada, Amaravati, and outstation destinations</p>
+        </div>
+
+        <div class="stats-container">
+
+            <!-- Box 1 -->
+            <div class="stat-box">
+                <h2 class="counter" data-target="100" data-suffix="+">0+</h2>
+                <p>
+                    Prime pickup hubs &amp; routes across<br>
+                    Vijayawada, Guntur &amp; Amaravati<br>
+                    region.
+                </p>
+            </div>
+
+            <!-- Box 2 -->
+            <div class="stat-box">
+                <h2 class="counter" data-target="50" data-suffix="K+">0K+</h2>
+                <p>
+                    Happy travelers trust Bezawada<br>
+                    Car Rentals for easy, affordable<br>
+                    and flexible journeys.
+                </p>
+            </div>
+
+            <!-- Box 3 -->
+            <div class="stat-box">
+                <h2 class="counter" data-target="500" data-suffix="+">0+</h2>
+                <p>
+                    Verified &amp; sanitized self-drive cars<br>
+                    available across hatchbacks, SUVs<br>
+                    and luxury models.
+                </p>
+            </div>
+
+            <!-- Box 4 -->
+            <div class="stat-box">
+                <h2 class="counter" data-target="24" data-suffix="/7">0/7</h2>
+                <p>
+                    Doorstep car delivery and dedicated<br>
+                    roadside support to assist your<br>
+                    trip anytime.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Number Counting Animation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const counters = document.querySelectorAll('.counter');
+            let hasAnimated = false;
+
+            const animateCounters = () => {
+                if (hasAnimated) return;
+                hasAnimated = true;
+                const duration = 2000; // 2 seconds for a luxurious count-up
+
+                counters.forEach(counter => {
+                    const target = parseInt(counter.getAttribute('data-target'), 10);
+                    const suffix = counter.getAttribute('data-suffix') || '';
+                    const startTime = performance.now();
+
+                    const updateCount = (currentTime) => {
+                        const elapsed = currentTime - startTime;
+                        const progress = Math.min(elapsed / duration, 1);
+                        
+                        // Ease out expo for smooth deceleration
+                        const ease = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+                        const current = Math.floor(ease * target);
+
+                        counter.textContent = current + suffix;
+
+                        if (progress < 1) {
+                            requestAnimationFrame(updateCount);
+                        } else {
+                            counter.textContent = target + suffix;
+                            counter.classList.add('counted');
+                        }
+                    };
+
+                    requestAnimationFrame(updateCount);
+                });
+            };
+
+            // IntersectionObserver triggers animation when visible
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounters();
+                        observer.disconnect();
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            const section = document.querySelector('.stats-section');
+            if (section) {
+                observer.observe(section);
+            } else {
+                animateCounters();
+            }
+        });
+    </script>
+
+</body>
+
+</html>

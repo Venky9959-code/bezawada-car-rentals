@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Why Choose Us - Bezawada Car Rentals</title>
+
+    <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="why_choose.css">
+</head>
+
+<body>
+
+    <section class="why-section">
+
+        <div class="why-header">
+            <span class="why-badge">THE BEZAWADA ADVANTAGE</span>
+            <h1>Why Choose Us for Self-Drive Car Rental in Vijayawada?</h1>
+            <p class="subtitle">
+                Experience total freedom, upfront honest pricing, and pristine showroom-condition cars delivered right to your doorstep anywhere in Vijayawada &amp; Amaravati.
+            </p>
+        </div>
+
+        <div class="cards-container">
+
+            <!-- Card 1 -->
+            <div class="card">
+                <div class="icon">
+                    <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="1" y="3" width="15" height="13"></rect>
+                        <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                        <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                        <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                    </svg>
+                </div>
+                <h2>Flexible Rental Plans</h2>
+                <p>
+                    From quick hourly city errands to weekend family getaways and multi-week subscriptions, choose an option that fits your journey.
+                </p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <div class="icon">
+                    <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                </div>
+                <h2>Doorstep Delivery &amp; Hubs</h2>
+                <p>
+                    Direct vehicle handover at Gannavaram Airport, Vijayawada Railway Station, or get it delivered straight to your home in 30 minutes.
+                </p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <div class="icon">
+                    <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="6" y1="4" x2="18" y2="4"></line>
+                        <line x1="6" y1="8" x2="18" y2="8"></line>
+                        <line x1="6" y1="12" x2="18" y2="12"></line>
+                        <path d="M6 8h7a4 4 0 0 1 0 8H6"></path>
+                        <line x1="9" y1="16" x2="15" y2="22"></line>
+                    </svg>
+                </div>
+                <h2>Transparent &amp; Honest Tariffs</h2>
+                <p>
+                    Zero hidden charges, transparent fuel &amp; kilometre options, and zero-security-deposit packages that keep your rentals hassle-free.
+                </p>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card">
+                <div class="icon">
+                    <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        <polyline points="9 12 11 14 15 10"></polyline>
+                    </svg>
+                </div>
+                <h2>Sanitized Cars &amp; 24/7 Support</h2>
+                <p>
+                    Every vehicle is thoroughly sanitized and mechanically inspected before delivery, backed by 24/7 roadside assistance across Andhra Pradesh.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Card Click Interactive Shadow Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.card');
+
+            cards.forEach(card => {
+                card.addEventListener('click', (e) => {
+                    const wasActive = card.classList.contains('is-active');
+                    cards.forEach(c => c.classList.remove('is-active'));
+                    if (!wasActive) {
+                        card.classList.add('is-active');
+                    }
+                });
+
+                // Accessible keyboard enter/space
+                card.setAttribute('tabindex', '0');
+                card.setAttribute('role', 'button');
+                card.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        card.click();
+                    }
+                });
+            });
+
+            // Dismiss active card shadow when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.card')) {
+                    cards.forEach(c => c.classList.remove('is-active'));
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

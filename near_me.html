@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Self Drive Car Rental in Vijayawada</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="places-section">
+
+        <!-- Heading -->
+        <h1>Rent a Self-Drive Car Near You in Vijayawada</h1>
+
+        <!-- Description -->
+        <p class="description">
+            Find self-drive car rental options across popular parts of Vijayawada.
+            Explore available cars near locations such as Undavalli, Kondapalli,
+            Bhavani Island, Kanaka Durga Temple and Prakasam Barrage.
+        </p>
+
+
+        <!-- Cards -->
+        <div class="carousel-wrapper">
+
+            <div class="places-container" id="placesContainer">
+
+                <!-- 1. Undavalli Caves -->
+                <div class="place-card">
+
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Undavalli%20Caves%202021.jpg?width=900"
+                        alt="Undavalli Caves">
+
+                    <div class="overlay"></div>
+
+                    <h3>Undavalli Caves</h3>
+
+                </div>
+
+
+                <!-- 2. Kondapalli Fort -->
+                <div class="place-card">
+
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kondapalli%20Fort.jpg?width=900"
+                        alt="Kondapalli Fort">
+
+                    <div class="overlay"></div>
+
+                    <h3>Kondapalli Fort</h3>
+
+                </div>
+
+
+                <!-- 3. Bhavani Island -->
+                <div class="place-card">
+
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Bhavani%20Island%20of%20Vijayawada.jpg?width=900"
+                        alt="Bhavani Island Vijayawada">
+
+                    <div class="overlay"></div>
+
+                    <h3>Bhavani Island</h3>
+
+                </div>
+
+
+                <!-- 4. Kanaka Durga Temple -->
+                <div class="place-card">
+
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kanaka%20Durga%20Temple.jpg?width=900"
+                        alt="Kanaka Durga Temple Vijayawada">
+
+                    <div class="overlay"></div>
+
+                    <h3>Kanaka Durga Temple</h3>
+
+                </div>
+
+
+                <!-- 5. Prakasam Barrage -->
+                <div class="place-card">
+
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Prakasam%20Barrage%20and%20River%20Krishna%20in%20Vijayawada.jpg?width=900"
+                        alt="Prakasam Barrage Vijayawada">
+
+                    <div class="overlay"></div>
+
+                    <h3>Prakasam Barrage</h3>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Navigation -->
+        <div class="navigation">
+
+            <button class="nav-btn" id="prevBtn">
+                &#8249;
+            </button>
+
+            <button class="nav-btn" id="nextBtn">
+                &#8250;
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <script>
+
+        const container =
+            document.getElementById("placesContainer");
+
+        const nextBtn =
+            document.getElementById("nextBtn");
+
+        const prevBtn =
+            document.getElementById("prevBtn");
+
+
+        nextBtn.addEventListener("click", function () {
+
+            container.scrollBy({
+                left: 340,
+                behavior: "smooth"
+            });
+
+        });
+
+
+        prevBtn.addEventListener("click", function () {
+
+            container.scrollBy({
+                left: -340,
+                behavior: "smooth"
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
