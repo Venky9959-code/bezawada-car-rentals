@@ -285,115 +285,38 @@
        ========================================================================== -->
   <div class="page-wrapper" id="bookingPageWrapper">
 
-    <!-- 1. Search & Booking Bar (Zoomcar Style - 2 Options Only) -->
-    <section class="search-widget-container" id="searchWidget">
+    <!-- 1. Two Action Buttons Floating Over Hero Section -->
+    <div class="hero-floating-actions" id="searchWidget" role="tablist">
+      <button class="hero-action-btn active" id="tabSelfDrive" type="button" role="tab" aria-selected="true" onclick="setBookingMode('Self Drive')">
+        <div class="btn-icon-box">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="9" rx="2" />
+            <circle cx="7.5" cy="16.5" r="1.5" />
+            <circle cx="16.5" cy="16.5" r="1.5" />
+            <path d="M5 11l2-6h10l2 6" />
+          </svg>
+        </div>
+        <div class="btn-text-content">
+          <div class="btn-title">Self Drive</div>
+          <div class="btn-sub">Drive yourself with full freedom</div>
+        </div>
+      </button>
 
-      <!-- 2 Options Switcher Only -->
-      <div class="search-tabs" role="tablist">
-        <button class="search-tab-btn active" id="tabSelfDrive" type="button" role="tab" aria-selected="true">
-          <div class="tab-title">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="11" width="18" height="9" rx="2" />
-              <circle cx="7.5" cy="16.5" r="1.5" />
-              <circle cx="16.5" cy="16.5" r="1.5" />
-              <path d="M5 11l2-6h10l2 6" />
-            </svg>
-            Self Drive
-          </div>
-          <div class="tab-sub">Drive yourself with full freedom</div>
-        </button>
-
-        <button class="search-tab-btn" id="tabWithDriver" type="button" role="tab" aria-selected="false">
-          <div class="tab-title">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-              <circle cx="9" cy="7" r="4" />
-              <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-            </svg>
-            Rent a Car (with driver)
-          </div>
-          <div class="tab-sub">Car with driver for easy travel anywhere</div>
-        </button>
-      </div>
-
-      <!-- Search Fields Card -->
-      <div class="search-box-card">
-        <form id="carSearchForm" onsubmit="event.preventDefault(); handleSearchSubmit();">
-          <div class="search-fields-grid">
-
-            <!-- Select Location in Vijayawada -->
-            <div class="search-field" id="fieldLocation" tabindex="0">
-              <div class="field-icon">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                  <circle cx="12" cy="10" r="3" />
-                </svg>
-              </div>
-              <div class="field-content">
-                <span class="field-label">Select Location in Vijayawada</span>
-                <select class="field-input" id="locationSelect" aria-label="Select Location in Vijayawada">
-                  <option value="Benz Circle" selected>Benz Circle</option>
-                  <option value="Vijayawada Railway Station">Vijayawada Railway Station</option>
-                  <option value="Gannavaram Airport">Gannavaram Airport</option>
-                  <option value="MG Road (Bandar Road)">MG Road (Bandar Road)</option>
-                  <option value="Auto Nagar">Auto Nagar</option>
-                  <option value="Governorpet / Besant Road">Governorpet / Besant Road</option>
-                  <option value="Kanaka Durga Temple / One Town">Kanaka Durga Temple / One Town</option>
-                  <option value="Enikepadu / Ramavarappadu">Enikepadu / Ramavarappadu</option>
-                  <option value="Poranki / Penamaluru">Poranki / Penamaluru</option>
-                  <option value="Bhavanipuram / Gollapudi">Bhavanipuram / Gollapudi</option>
-                  <option value="Doorstep Delivery (Vijayawada)">Doorstep Delivery (Anywhere in Vijayawada)</option>
-                </select>
-              </div>
-            </div>
-
-            <!-- Trip Start Date & Time -->
-            <div class="search-field" id="fieldStart" tabindex="0">
-              <div class="field-icon">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-                  <line x1="16" y1="2" x2="16" y2="6" />
-                  <line x1="8" y1="2" x2="8" y2="6" />
-                  <line x1="3" y1="10" x2="21" y2="10" />
-                </svg>
-              </div>
-              <div class="field-content">
-                <span class="field-label">Trip Start Date &amp; Time</span>
-                <input type="datetime-local" class="field-input" id="tripStartDate" aria-label="Select Trip Start Date and Time">
-              </div>
-            </div>
-
-            <!-- Trip End Date & Time -->
-            <div class="search-field no-divider" id="fieldEnd" tabindex="0">
-              <div class="field-icon">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-                  <line x1="16" y1="2" x2="16" y2="6" />
-                  <line x1="8" y1="2" x2="8" y2="6" />
-                  <line x1="3" y1="10" x2="21" y2="10" />
-                </svg>
-              </div>
-              <div class="field-content">
-                <span class="field-label">Trip End Date &amp; Time</span>
-                <input type="datetime-local" class="field-input" id="tripEndDate" aria-label="Select Trip End Date and Time">
-              </div>
-            </div>
-
-            <!-- Search Button -->
-            <button type="submit" class="btn-search-cars" id="btnSearchSubmit">
-              <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="11" cy="11" r="8" />
-                <line x1="21" y1="21" x2="16.65" y2="16.65" />
-              </svg>
-              Search Cars
-            </button>
-
-          </div>
-        </form>
-      </div>
-
-    </section>
+      <button class="hero-action-btn" id="tabWithDriver" type="button" role="tab" aria-selected="false" onclick="setBookingMode('With Driver')">
+        <div class="btn-icon-box">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+            <circle cx="9" cy="7" r="4" />
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+          </svg>
+        </div>
+        <div class="btn-text-content">
+          <div class="btn-title">Rent a Car (with driver)</div>
+          <div class="btn-sub">Car with driver for easy travel anywhere</div>
+        </div>
+      </button>
+    </div>
 
     <!-- 2. Popular Cars Section (Horizontal Single-Line Slider) -->
     <section class="cars-section is-active" id="popularCarsSection">
@@ -1371,18 +1294,26 @@
   </footer>
 
   <!-- ==========================================================================
-       STICKY BOTTOM FLOATING BAR (Reveals on Scroll Past Search Widget)
+       FLOATING ACTION BUTTONS ON SCROLL (Slides up from bottom, properly aligned)
        ========================================================================== -->
-  <div class="sticky-bottom-bar" id="stickyBottomBar" role="region" aria-label="Quick Booking Bar">
-    <div class="sticky-summary">
-      <span class="sticky-mode-tag" id="stickyModeTag">Self Drive</span>
-      <div class="sticky-dates">
-        <span class="sticky-dates-label">Selected Dates &amp; Hub</span>
-        <span class="sticky-dates-text" id="stickyDatesText">Vijayawada (Benz Circle) • Tomorrow, 09:00 AM → Day after, 09:00 PM</span>
-      </div>
-    </div>
-    <button class="sticky-btn-book" type="button" onclick="scrollToBooking()">
-      Book Now / Modify
+  <div class="floating-scroll-actions" id="floatingScrollActions" role="region" aria-label="Quick Service Selection">
+    <button class="scroll-action-btn active" id="scrollTabSelfDrive" type="button" onclick="setBookingMode('Self Drive')">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="11" width="18" height="9" rx="2" />
+        <circle cx="7.5" cy="16.5" r="1.5" />
+        <circle cx="16.5" cy="16.5" r="1.5" />
+        <path d="M5 11l2-6h10l2 6" />
+      </svg>
+      <span>Self Drive</span>
+    </button>
+    <button class="scroll-action-btn" id="scrollTabWithDriver" type="button" onclick="setBookingMode('With Driver')">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+      </svg>
+      <span>Rent a Car (with driver)</span>
     </button>
   </div>
 
@@ -1436,51 +1367,47 @@
   <script src="js/main.js"></script>
 
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // 1. Tab Switching (2 Options Only: Self Drive & Rent a Car with Driver)
-      const tabSelfDrive = document.getElementById('tabSelfDrive');
-      const tabWithDriver = document.getElementById('tabWithDriver');
-      const stickyModeTag = document.getElementById('stickyModeTag');
+    let currentServiceMode = 'Self Drive';
 
-      let currentMode = 'Self Drive';
+    function setBookingMode(mode) {
+      currentServiceMode = mode;
+      const isSelf = mode === 'Self Drive';
 
-      if (tabSelfDrive && tabWithDriver) {
-        tabSelfDrive.addEventListener('click', () => {
-          tabSelfDrive.classList.add('active');
-          tabSelfDrive.setAttribute('aria-selected', 'true');
-          tabWithDriver.classList.remove('active');
-          tabWithDriver.setAttribute('aria-selected', 'false');
-          currentMode = 'Self Drive';
-          if (stickyModeTag) stickyModeTag.textContent = 'Self Drive';
-          updateStickySummary();
-        });
-
-        tabWithDriver.addEventListener('click', () => {
-          tabWithDriver.classList.add('active');
-          tabWithDriver.setAttribute('aria-selected', 'true');
-          tabSelfDrive.classList.remove('active');
-          tabSelfDrive.setAttribute('aria-selected', 'false');
-          currentMode = 'With Driver';
-          if (stickyModeTag) stickyModeTag.textContent = 'Chauffeur Driven';
-          updateStickySummary();
-        });
+      // Update Hero action buttons
+      const tabSelf = document.getElementById('tabSelfDrive');
+      const tabDriver = document.getElementById('tabWithDriver');
+      if (tabSelf && tabDriver) {
+        tabSelf.classList.toggle('active', isSelf);
+        tabSelf.setAttribute('aria-selected', isSelf ? 'true' : 'false');
+        tabDriver.classList.toggle('active', !isSelf);
+        tabDriver.setAttribute('aria-selected', !isSelf ? 'true' : 'false');
       }
 
-      // 2. Sticky Bottom Bar Trigger on Scroll
-      const searchWidget = document.getElementById('searchWidget');
-      const stickyBottomBar = document.getElementById('stickyBottomBar');
+      // Update Floating scroll action buttons
+      const scrollSelf = document.getElementById('scrollTabSelfDrive');
+      const scrollDriver = document.getElementById('scrollTabWithDriver');
+      if (scrollSelf && scrollDriver) {
+        scrollSelf.classList.toggle('active', isSelf);
+        scrollDriver.classList.toggle('active', !isSelf);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Floating Bottom Actions Trigger on Scroll
+      const heroActions = document.getElementById('searchWidget');
+      const floatingScrollActions = document.getElementById('floatingScrollActions');
 
       window.addEventListener('scroll', () => {
-        if (!searchWidget || !stickyBottomBar) return;
-        const rect = searchWidget.getBoundingClientRect();
-        if (rect.bottom < 100) {
-          stickyBottomBar.classList.add('is-visible');
+        if (!floatingScrollActions) return;
+        const triggerPoint = heroActions ? (heroActions.offsetTop + heroActions.offsetHeight) : 280;
+        if (window.scrollY > triggerPoint - 80) {
+          floatingScrollActions.classList.add('is-visible');
         } else {
-          stickyBottomBar.classList.remove('is-visible');
+          floatingScrollActions.classList.remove('is-visible');
         }
       }, { passive: true });
 
-      // 3. Category Filter Pills
+      // 2. Category Filter Pills
       const filterPills = document.querySelectorAll('.filter-pill');
       const carCards = document.querySelectorAll('.car-card');
 
@@ -1503,7 +1430,7 @@
         });
       });
 
-      // 4. Card Click Selection Shadow
+      // 3. Card Click Selection Shadow
       carCards.forEach(card => {
         card.addEventListener('click', (e) => {
           if (e.target.closest('.btn-wishlist') || e.target.closest('.btn-book-card')) {
@@ -1517,7 +1444,7 @@
         });
       });
 
-      // 5. Why Choose Us Cards Click Selection Shadow
+      // 4. Why Choose Us Cards Click Selection Shadow
       const whyCards = document.querySelectorAll('.why-section .card');
       whyCards.forEach(card => {
         card.addEventListener('click', (e) => {
@@ -1542,69 +1469,7 @@
         }
       });
 
-      // 6. Initialize Date & Time Pickers with Local Dates
-      const now = new Date();
-      const tomorrow = new Date(now);
-      tomorrow.setDate(tomorrow.getDate() + 1);
-      tomorrow.setHours(9, 0, 0, 0);
-
-      const dayAfter = new Date(now);
-      dayAfter.setDate(dayAfter.getDate() + 2);
-      dayAfter.setHours(21, 0, 0, 0);
-
-      function toLocalISO(dt) {
-        const pad = n => String(n).padStart(2, '0');
-        return `${dt.getFullYear()}-${pad(dt.getMonth() + 1)}-${pad(dt.getDate())}T${pad(dt.getHours())}:${pad(dt.getMinutes())}`;
-      }
-
-      const locationSelect = document.getElementById('locationSelect');
-      const tripStartDate = document.getElementById('tripStartDate');
-      const tripEndDate = document.getElementById('tripEndDate');
-
-      if (tripStartDate) {
-        tripStartDate.min = toLocalISO(now);
-        tripStartDate.value = toLocalISO(tomorrow);
-      }
-      if (tripEndDate) {
-        tripEndDate.min = toLocalISO(tomorrow);
-        tripEndDate.value = toLocalISO(dayAfter);
-      }
-
-      function formatHumanDate(val) {
-        if (!val) return '';
-        const d = new Date(val);
-        if (isNaN(d.getTime())) return val;
-        return d.toLocaleString('en-IN', {
-          day: 'numeric',
-          month: 'short',
-          hour: '2-digit',
-          minute: '2-digit',
-          hour12: true
-        });
-      }
-
-      function updateStickySummary() {
-        const loc = locationSelect ? locationSelect.value.trim() : 'Benz Circle';
-        const startStr = tripStartDate && tripStartDate.value ? formatHumanDate(tripStartDate.value) : 'Tomorrow, 09:00 AM';
-        const endStr = tripEndDate && tripEndDate.value ? formatHumanDate(tripEndDate.value) : 'Day after, 09:00 PM';
-        const text = `Vijayawada (${loc}) • ${startStr} → ${endStr}`;
-        const stickyDatesText = document.getElementById('stickyDatesText');
-        if (stickyDatesText) stickyDatesText.textContent = text;
-      }
-
-      if (locationSelect) locationSelect.addEventListener('change', updateStickySummary);
-      if (tripStartDate) tripStartDate.addEventListener('change', () => {
-        if (tripEndDate && tripEndDate.value < tripStartDate.value) {
-          const newEnd = new Date(tripStartDate.value);
-          newEnd.setDate(newEnd.getDate() + 1);
-          tripEndDate.value = toLocalISO(newEnd);
-        }
-        updateStickySummary();
-      });
-      if (tripEndDate) tripEndDate.addEventListener('change', updateStickySummary);
-      updateStickySummary();
-
-      // 7. Statistics Animated Counters with Deceleration Ease
+      // 5. Statistics Animated Counters with Deceleration Ease
       const counters = document.querySelectorAll('.stats-section .counter');
       let hasAnimated = false;
 
@@ -1676,35 +1541,17 @@
       }
     }
 
-    // Scroll Back to Search Widget / Booking
+    // Scroll Back to Cars Section
     function scrollToBooking() {
       const carsSection = document.getElementById('popularCarsSection');
-      if (carsSection && !carsSection.classList.contains('is-active')) {
-        carsSection.classList.add('is-active');
-      }
-      const searchWidget = document.getElementById('searchWidget');
-      if (searchWidget) {
-        searchWidget.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }
-    }
-
-    // Search Form Submit Handler: Reveal cars section only on Search Cars click
-    function handleSearchSubmit() {
-      const carsSection = document.getElementById('popularCarsSection');
       if (carsSection) {
-        carsSection.classList.add('is-active');
-        setTimeout(() => {
-          carsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 50);
+        carsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     }
 
     // Category Select and Scroll
     function selectCategoryAndScroll(category) {
       const carsSection = document.getElementById('popularCarsSection');
-      if (carsSection && !carsSection.classList.contains('is-active')) {
-        carsSection.classList.add('is-active');
-      }
       const filterPill = document.querySelector(`.filter-pill[data-category="${category}"]`);
       if (filterPill) {
         filterPill.click();
@@ -1716,11 +1563,6 @@
 
     // Select Hub from dropdown/footer and scroll
     function selectHubAndScroll(hubName) {
-      const locationSelect = document.getElementById('locationSelect');
-      if (locationSelect) {
-        locationSelect.value = hubName;
-        locationSelect.dispatchEvent(new Event('change'));
-      }
       const modal = document.getElementById('cityModal');
       if (modal) modal.classList.remove('active');
       scrollToBooking();
@@ -1728,42 +1570,14 @@
 
     // Switch to with driver and scroll
     function switchToWithDriverAndScroll() {
-      const tabWithDriver = document.getElementById('tabWithDriver');
-      if (tabWithDriver) {
-        tabWithDriver.click();
-      }
+      setBookingMode('With Driver');
       scrollToBooking();
     }
 
     // Book Car Click Handler: Forward all details to WhatsApp 93930 93095
     function bookCar(carName, price, specs) {
-      const tabSelfDrive = document.getElementById('tabSelfDrive');
-      const isSelfDrive = tabSelfDrive ? tabSelfDrive.classList.contains('active') : true;
-      const serviceType = isSelfDrive ? 'Self Drive' : 'Rent a Car (with driver)';
-      const locationSelect = document.getElementById('locationSelect');
-      const location = (locationSelect ? locationSelect.value : 'Benz Circle').trim() || 'Benz Circle';
-      
-      const tripStartDate = document.getElementById('tripStartDate');
-      const tripEndDate = document.getElementById('tripEndDate');
-
-      function formatForMsg(val, fallback) {
-        if (!val) return fallback;
-        const d = new Date(val);
-        if (isNaN(d.getTime())) return fallback;
-        return d.toLocaleString('en-IN', {
-          day: 'numeric',
-          month: 'short',
-          year: 'numeric',
-          hour: '2-digit',
-          minute: '2-digit',
-          hour12: true
-        });
-      }
-
-      const startDate = tripStartDate && tripStartDate.value ? formatForMsg(tripStartDate.value, 'Tomorrow, 09:00 AM') : 'Tomorrow, 09:00 AM';
-      const endDate = tripEndDate && tripEndDate.value ? formatForMsg(tripEndDate.value, 'Day after, 09:00 PM') : 'Day after, 09:00 PM';
-
-      const message = `Hello Bezawada Car Rentals! 🚗\n\nI would like to book a car with the following details:\n\n• Service Mode: ${serviceType}\n• Car Model: ${carName}\n• Rate: ${price || 'Standard Daily Rate'}\n• Specs: ${specs || 'Standard Features'}\n• Pick-up Location: ${location}, Vijayawada\n• Trip Start: ${startDate}\n• Trip End: ${endDate}\n\nPlease confirm availability and booking procedure. Thank you!`;
+      const serviceType = currentServiceMode === 'With Driver' ? 'Rent a Car (with driver)' : 'Self Drive';
+      const message = `Hello Bezawada Car Rentals! 🚗\n\nI would like to book a car with the following details:\n\n• Service Mode: ${serviceType}\n• Car Model: ${carName}\n• Rate: ${price || 'Standard Daily Rate'}\n• Specs: ${specs || 'Standard Features'}\n• Pick-up Location: Vijayawada (Doorstep Delivery or Hub Pickup)\n\nPlease confirm availability and booking procedure. Thank you!`;
 
       const whatsappUrl = `https://wa.me/919393093095?text=${encodeURIComponent(message)}`;
       window.open(whatsappUrl, '_blank');
