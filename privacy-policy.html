@@ -50,6 +50,7 @@
       </nav>
 
       <button type="button" class="action-btn login-btn" onclick="scrollToBooking()">
+        <span>Book Now</span>
         <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"
           stroke-linecap="round" stroke-linejoin="round">
           <path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2" />
@@ -57,7 +58,6 @@
           <path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8" />
           <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15" />
         </svg>
-        <span>Book Now</span>
       </button>
     </div>
   </header>
@@ -281,15 +281,17 @@
     </div>
   </main>
 
-  <!-- Universal Footer -->
-  <footer class="site-footer">
+  <!-- ==========================================================================
+       SECTION 7: FOOTER SECTION (4 Columns, Trust Ribbon, Copyright & Back to Top)
+       ========================================================================== -->
+  <footer class="site-footer" id="siteFooter" role="contentinfo">
     <div class="footer-top-wrap">
       <div class="footer-main-grid">
 
-        <!-- Column 1: Brand Info -->
+        <!-- Col 1: Brand Info -->
         <div class="footer-brand-col">
           <a href="index.html" class="footer-logo-link">
-            <img src="logo/logo.jpeg" alt="Bezawada Car Rentals" class="footer-logo-img">
+            <img src="logo/logo.jpeg" alt="Bezawada Car Rentals Logo" class="footer-logo-img">
             <div class="footer-brand-title">
               BEZAWADA
               <span>CAR RENTALS</span>
@@ -297,41 +299,21 @@
           </a>
           <p class="footer-about-text">
             Vijayawada's premier car rental agency providing self-drive cars and Car with Driver luxury rides with
-            seamless
-            doorstep delivery, well-maintained vehicles, and transparent pricing.
+            seamless doorstep delivery, well-maintained vehicles, and transparent pricing.
           </p>
-          <div class="footer-contact-details">
-            <a href="tel:+919393093095" class="footer-contact-row">
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2">
-                <path
-                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
-                </path>
-              </svg>
-              <span>+91 93930 93095</span>
-            </a>
-            <a href="https://maps.app.goo.gl/FpaitXiBT1WkVSNq5" target="_blank" rel="noopener noreferrer"
-              class="footer-contact-row" style="text-decoration: none; color: inherit;">
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                <circle cx="12" cy="10" r="3"></circle>
-              </svg>
-              <span>48-19-2/2/GF, Vinayaka Temple Road, Kanuru, Vijayawada, AP - 520008</span>
-            </a>
-          </div>
         </div>
 
-        <!-- Column 2: Quick Links -->
+        <!-- Col 2: Fleet & Rentals -->
         <div class="footer-col">
           <h3 class="footer-col-title">Company</h3>
-          <ul class="footer-links">
-
+          <ul class="footer-nav-list">
             <li><a href="terms.html">Terms and Conditions </a></li>
             <li><a href="privacy-policy.html">Privacy Policy</a></li>
             <li><a href="disclaimer.html">Disclaimer</a></li>
           </ul>
         </div>
 
-        <!-- Column 3: Social Media -->
+
         <div class="footer-col">
           <h3 class="footer-col-title">Follow Us</h3>
           <div class="footer-social-links">
@@ -392,7 +374,7 @@
           © 2026 Bezawada Car Rentals. All rights reserved.
         </div>
         <div class="footer-bottom-links" style="color: #E2E8F0;">
-          <p>Design &amp; Developed by : <a href="https://www.peakoo.agency" target="_blank">
+          <p>Design & Developed by : <a href="https://www.peakoo.agency" target="_blank">
               <b>Peakoo Agency</b></a>
           </p>
           <button class="btn-back-to-top" type="button" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"

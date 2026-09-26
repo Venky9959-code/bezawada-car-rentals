@@ -227,10 +227,24 @@ function getIntroHTML(data) {
 
 function initStatsHighlightCycle() {
   const cardsRow = document.getElementById('statsCardsRow');
+  if (!cardsRow) return;
+
+  const capsules = cardsRow.querySelectorAll('.hero-feature-capsule');
+  if (capsules.length > 0) {
+    let activeIdx = 0;
+    capsules[0].classList.add('active-glow');
+    setInterval(() => {
+      capsules[activeIdx].classList.remove('active-glow');
+      activeIdx = (activeIdx + 1) % capsules.length;
+      capsules[activeIdx].classList.add('active-glow');
+    }, 2800);
+    return;
+  }
+
   const dynamicHeader = document.getElementById('revvDynamicHeader');
   const showcase = document.getElementById('revvShowcase');
 
-  if (!cardsRow || !dynamicHeader) return;
+  if (!dynamicHeader) return;
 
   // Ensure a 6th buffer card exists at the end of the row
   if (cardsRow.children.length === 5) {

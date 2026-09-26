@@ -1438,7 +1438,7 @@ input[type="datetime-local"].field-input::-webkit-calendar-picker-indicator:hove
     width: 100%;
     background-color: #070B14;
     color: #94A3B8;
-    margin-top: 80px;
+    margin-top: 50px;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     position: relative;
     z-index: 10;
@@ -1447,14 +1447,14 @@ input[type="datetime-local"].field-input::-webkit-calendar-picker-indicator:hove
 .footer-top-wrap {
     max-width: 1340px;
     margin: 0 auto;
-    padding: 70px 24px 40px;
+    padding: 42px 24px 18px;
 }
 
 .footer-main-grid {
     display: grid;
     grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
-    gap: 48px;
-    margin-bottom: 50px;
+    gap: 36px;
+    margin-bottom: 16px;
 }
 
 /* Brand Column */
