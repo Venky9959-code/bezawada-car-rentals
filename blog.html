@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Blog & Road Trip Guides | Bezawada Car Rentals</title>
+  <meta name="description"
+    content="Discover scenic road trips, travel tips, local attractions, and expert self-drive guides across Vijayawada, Amaravati and Andhra Pradesh.">
+  <link rel="icon" href="logo/logo.jpeg" type="image/jpeg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="pages.css">
+</head>
+
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open navigation menu">
+        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <a href="index.html" class="brand-logo">
+        <img src="logo/logo.jpeg" alt="Bezawada Car Rentals" class="logo-img">
+        <div class="brand-text">
+          <span class="brand-name">BEZAWADA</span>
+          <span class="brand-sub">CAR RENTALS</span>
+        </div>
+      </a>
+
+      <nav class="desktop-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#popularCarsSection" class="nav-link">Our Fleet</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="blog.html" class="nav-link active">Blog</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+        <a href="terms.html" class="nav-link">Terms</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="https://wa.me/919393093095?text=Hello%20Bezawada%20Car%20Rentals!%20I%20am%20reading%20your%20blog%20and%20want%20to%20book%20a%20car."
+          target="_blank" rel="noopener noreferrer" class="action-btn hotline-btn">
+          <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+            </path>
+          </svg>
+          <span class="hotline-text">+91 93930 93095</span>
+        </a>
+
+        <a href="index.html#popularCarsSection" class="action-btn login-btn">
+          <span>Explore Cars</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo">
+        <img src="logo/logo.jpeg" alt="Bezawada Car Rentals" class="logo-img">
+        <span class="brand-name">BEZAWADA CARS</span>
+      </div>
+      <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close menu">&times;</button>
+    </div>
+    <div class="mobile-drawer-body">
+      <a href="index.html" class="drawer-link">Home</a>
+      <a href="index.html#popularCarsSection" class="drawer-link">Explore Fleet</a>
+      <a href="about.html" class="drawer-link">About Us</a>
+      <a href="blog.html" class="drawer-link">Blog &amp; Travel Guides</a>
+      <a href="contact.html" class="drawer-link">Contact Us</a>
+      <a href="terms.html" class="drawer-link">Terms &amp; Conditions</a>
+      <div class="drawer-divider"></div>
+      <a href="https://wa.me/919393093095" target="_blank" rel="noopener noreferrer" class="drawer-phone">
+        <span>Instant WhatsApp &amp; Call Booking:</span>
+        <strong>+91 93930 93095</strong>
+      </a>
+    </div>
+  </div>
+
+  <!-- Page Hero Header -->
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <div class="breadcrumb-nav">
+        <a href="index.html">Home</a>
+        <span class="sep">/</span>
+        <span class="current">Blog &amp; Guides</span>
+      </div>
+      <h1>Bezawada Travel &amp; Road Trip Journal</h1>
+      <p class="lead">Curated road trip itineraries, expert car rental advice, and insider guides to exploring the cultural, coastal, and heritage riches of Andhra Pradesh.</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="page-container">
+
+    <!-- Category Filter Bar -->
+    <div class="blog-filter-bar">
+      <button class="blog-filter-pill active" data-filter="all" onclick="filterBlog('all')">All Articles (6)</button>
+      <button class="blog-filter-pill" data-filter="roadtrips" onclick="filterBlog('roadtrips')">Road Trips</button>
+      <button class="blog-filter-pill" data-filter="tips" onclick="filterBlog('tips')">Rental Tips</button>
+      <button class="blog-filter-pill" data-filter="fleet" onclick="filterBlog('fleet')">Car Guides</button>
+      <button class="blog-filter-pill" data-filter="city" onclick="filterBlog('city')">Vijayawada &amp; Airport</button>
+    </div>
+
+    <!-- Blog Articles Grid -->
+    <div class="blog-grid" id="blogGrid">
+
+      <!-- Article 1 -->
+      <article class="blog-card" data-category="roadtrips">
+        <div class="blog-card-media">
+          <img src="assets/images/bg.png" alt="Prakasam Barrage and scenic road trips from Vijayawada">
+          <span class="blog-tag-badge">Road Trips</span>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-meta-row">
+            <span>📅 September 2026</span>
+            <span>•</span>
+            <span>⏱️ 6 min read</span>
+          </div>
+          <h3>Top 7 Scenic Weekend Road Trips from Vijayawada in a Self-Drive SUV</h3>
+          <p>From the serene backwaters of Bhavani Island to the historic heights of Kondapalli Fort and the tranquil Buddhist stupas of Amaravati, discover the most rewarding drives within 3 hours of the city.</p>
+          <a href="https://wa.me/919393093095?text=Hi%20Bezawada%20Car%20Rentals!%20I%20want%20to%20rent%20an%20SUV%20for%20a%20weekend%20road%20trip." target="_blank" class="blog-read-link">
+            <span>Book an SUV for this trip</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Article 2 -->
+      <article class="blog-card" data-category="tips">
+        <div class="blog-card-media">
+          <img src="cars/SWIFT.jpeg" alt="Self-drive car rental tips in Vijayawada">
+          <span class="blog-tag-badge">Rental Tips</span>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-meta-row">
+            <span>📅 September 2026</span>
+            <span>•</span>
+            <span>⏱️ 4 min read</span>
+          </div>
+          <h3>First Time Renting a Self-Drive Car in Vijayawada? Essential Beginner Checklist</h3>
+          <p>Everything you need to verify before driving off: understanding mileage slabs (400 km/24h vs 200 km/12h), the 110 km/h speed policy, required address proofs, and 360° vehicle video logging.</p>
+          <a href="terms.html" class="blog-read-link">
+            <span>Read Complete Rental Guidelines</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Article 3 -->
+      <article class="blog-card" data-category="fleet">
+        <div class="blog-card-media">
+          <img src="cars/INNOVA%20CRYSTA.jpeg" alt="Toyota Innova Crysta for family trips across Andhra Pradesh">
+          <span class="blog-tag-badge">Car Guides</span>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-meta-row">
+            <span>📅 August 2026</span>
+            <span>•</span>
+            <span>⏱️ 5 min read</span>
+          </div>
+          <h3>Why the Toyota Innova Crysta is the Undisputed King of Andhra Family Road Trips</h3>
+          <p>Unmatched long-distance highway comfort on NH16, plush dual-zone climate control, effortless luggage capacity, and superior passenger legroom make the Crysta the #1 choice for pilgrimages to Tirupati and family vacations.</p>
+          <a href="https://wa.me/919393093095?text=Hello%20Bezawada%20Car%20Rentals!%20I%20am%20interested%20in%20booking%20the%20Innova%20Crysta." target="_blank" class="blog-read-link">
+            <span>Inquire About Innova Crysta</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Article 4 -->
+      <article class="blog-card" data-category="city">
+        <div class="blog-card-media">
+          <img src="cars/CRETA.jpeg" alt="Gannavaram Airport car rental in Vijayawada">
+          <span class="blog-tag-badge">Airport Guide</span>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-meta-row">
+            <span>📅 August 2026</span>
+            <span>•</span>
+            <span>⏱️ 4 min read</span>
+          </div>
+          <h3>Gannavaram Airport (VGA) Car Rental Guide: Smooth Landing to Amaravati</h3>
+          <p>Arriving by flight? Skip overpriced taxi queues and surge pricing. Learn how our dedicated meet-and-greet airport delivery allows you to receive your keys right outside the arrival gate within 10 minutes.</p>
+          <a href="contact.html" class="blog-read-link">
+            <span>Arrange Airport Delivery</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Article 5 -->
+      <article class="blog-card" data-category="fleet">
+        <div class="blog-card-media">
+          <img src="cars/BMW%20320D.jpeg" alt="Luxury car rental BMW 320d for weddings and VIP travel in Vijayawada">
+          <span class="blog-tag-badge">Car Guides</span>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-meta-row">
+            <span>📅 July 2026</span>
+            <span>•</span>
+            <span>⏱️ 5 min read</span>
+          </div>
+          <h3>Luxury Sedans for Weddings &amp; Executive Travel in Vijayawada: BMW &amp; Mercedes Benz</h3>
+          <p>Make a distinguished entrance at high-profile corporate conventions, luxury weddings, and VIP events. Explore our chauffeur-driven and self-drive luxury fleet featuring the BMW 320d and Mercedes-Benz C220D.</p>
+          <a href="https://wa.me/919393093095?text=Hello%20Bezawada%20Car%20Rentals!%20I%20would%20like%20to%20rent%20a%20luxury%20car." target="_blank" class="blog-read-link">
+            <span>Reserve Luxury Car</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Article 6 -->
+      <article class="blog-card" data-category="tips">
+        <div class="blog-card-media">
+          <img src="cars/THAR.jpeg" alt="Mahindra Thar 4x4 self drive car rental">
+          <span class="blog-tag-badge">Travel Tips</span>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-meta-row">
+            <span>📅 July 2026</span>
+            <span>•</span>
+            <span>⏱️ 5 min read</span>
+          </div>
+          <h3>Self-Drive vs. Chauffeur-Driven: Which Option Best Suits Your Itinerary?</h3>
+          <p>Comparing costs, personal privacy, driving endurance on highway stretches, and route flexibility to help you decide whether to take the steering wheel yourself or relax with an experienced local driver.</p>
+          <a href="index.html#searchWidget" class="blog-read-link">
+            <span>Switch Between Options</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Newsletter & WhatsApp Community Banner -->
+    <div style="background: linear-gradient(135deg, #0e8354 0%, #066970 100%); border-radius: var(--radius-lg); padding: 45px 30px; text-align: center; color: white;">
+      <h3 style="font-family: var(--font-heading); font-size: 28px; font-weight: 800; margin-bottom: 10px;">Planning Your Next Andhra Road Trip?</h3>
+      <p style="font-size: 16px; color: rgba(255,255,255,0.9); max-width: 580px; margin: 0 auto 24px;">Get curated road trip route maps, highway restaurant recommendations, and exclusive weekend discounts delivered straight to your WhatsApp.</p>
+      <a href="https://wa.me/919393093095?text=Hello%20Bezawada%20Car%20Rentals!%20Please%20send%20me%20road%20trip%20packages%20and%20offers."
+        target="_blank" rel="noopener noreferrer" class="terms-highlight-cta" style="font-size: 15.5px; padding: 12px 32px; display: inline-block;">
+        Connect on WhatsApp (+91 93930 93095) &rarr;
+      </a>
+    </div>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-col footer-col-brand">
+          <div class="footer-brand">
+            <img src="logo/logo.jpeg" alt="Bezawada Car Rentals" class="footer-logo">
+            <span class="footer-brand-title">BEZAWADA CARS</span>
+          </div>
+          <p class="footer-desc">Vijayawada's #1 trusted self-drive &amp; chauffeur car rental platform. Seamless bookings, pristine sanitized fleet, and 24/7 dedicated support across Andhra Pradesh.</p>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-col-title">Quick Links</h3>
+          <ul class="footer-nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#popularCarsSection">Our Fleet (9 Cars)</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Travel Blog &amp; Guides</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="terms.html">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-col-title">Prime Hubs in Vijayawada</h3>
+          <ul class="footer-nav-list">
+            <li><a href="contact.html">Gannavaram Airport (VGA)</a></li>
+            <li><a href="contact.html">Benz Circle Hub</a></li>
+            <li><a href="contact.html">Vijayawada Junction Railway Station</a></li>
+            <li><a href="contact.html">Pandit Nehru Bus Station (PNBS)</a></li>
+            <li><a href="contact.html">Auto Nagar / Poranki</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-col-title">Contact &amp; Support</h3>
+          <ul class="footer-nav-list">
+            <li><a href="tel:+919393093095">Phone: +91 93930 93095</a></li>
+            <li><a href="https://wa.me/919393093095" target="_blank">WhatsApp: 24/7 Booking</a></li>
+            <li><a href="terms.html">Terms &amp; Conditions</a></li>
+            <li><a href="contact.html">Send an Inquiry</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div class="footer-bottom-inner">
+          <div class="footer-copyright">
+            &copy; 2026 Bezawada Car Rentals. All rights reserved.
+          </div>
+          <div class="footer-bottom-links">
+            <a href="terms.html">Terms &amp; Conditions</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="blog.html">Blog</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const drawerCloseBtn = document.getElementById('drawerCloseBtn');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+
+    if (mobileMenuBtn && mobileDrawer) {
+      mobileMenuBtn.addEventListener('click', () => mobileDrawer.classList.add('is-open'));
+    }
+    if (drawerCloseBtn && mobileDrawer) {
+      drawerCloseBtn.addEventListener('click', () => mobileDrawer.classList.remove('is-open'));
+    }
+
+    function filterBlog(category) {
+      const pills = document.querySelectorAll('.blog-filter-pill');
+      pills.forEach(p => p.classList.remove('active'));
+      const activePill = document.querySelector(`.blog-filter-pill[data-filter="${category}"]`);
+      if (activePill) activePill.classList.add('active');
+
+      const cards = document.querySelectorAll('.blog-card');
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-category');
+        if (category === 'all' || cat === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
