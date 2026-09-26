@@ -285,37 +285,18 @@
        ========================================================================== -->
   <div class="page-wrapper" id="bookingPageWrapper">
 
-    <!-- 1. Two Action Buttons Floating Over Hero Section -->
-    <div class="hero-floating-actions" id="searchWidget" role="tablist">
-      <button class="hero-action-btn active" id="tabSelfDrive" type="button" role="tab" aria-selected="true" onclick="setBookingMode('Self Drive')">
-        <div class="btn-icon-box">
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="11" width="18" height="9" rx="2" />
-            <circle cx="7.5" cy="16.5" r="1.5" />
-            <circle cx="16.5" cy="16.5" r="1.5" />
-            <path d="M5 11l2-6h10l2 6" />
-          </svg>
-        </div>
-        <div class="btn-text-content">
-          <div class="btn-title">Self Drive</div>
-          <div class="btn-sub">Drive yourself with full freedom</div>
-        </div>
-      </button>
-
-      <button class="hero-action-btn" id="tabWithDriver" type="button" role="tab" aria-selected="false" onclick="setBookingMode('With Driver')">
-        <div class="btn-icon-box">
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-            <circle cx="9" cy="7" r="4" />
-            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-          </svg>
-        </div>
-        <div class="btn-text-content">
-          <div class="btn-title">Rent a Car (with driver)</div>
-          <div class="btn-sub">Car with driver for easy travel anywhere</div>
-        </div>
-      </button>
+    <!-- 1. Two Action Buttons below Hero Section (Revv Style Curved Container) -->
+    <div class="hero-action-tabs-container" id="searchWidget" role="tablist">
+      <div class="hero-action-tabs-card">
+        <button class="revv-tab-btn active" id="tabSelfDrive" type="button" role="tab" aria-selected="true" onclick="setBookingMode('Self Drive')">
+          <span class="revv-tab-title">Self Drive</span>
+          <span class="revv-tab-sub">Short trips, upto 7 days</span>
+        </button>
+        <button class="revv-tab-btn" id="tabWithDriver" type="button" role="tab" aria-selected="false" onclick="setBookingMode('With Driver')">
+          <span class="revv-tab-title">Rent a Car (with driver)</span>
+          <span class="revv-tab-sub">Chauffeur driven, long or daily</span>
+        </button>
+      </div>
     </div>
 
     <!-- 2. Popular Cars Section (Horizontal Single-Line Slider) -->
@@ -1294,27 +1275,19 @@
   </footer>
 
   <!-- ==========================================================================
-       FLOATING ACTION BUTTONS ON SCROLL (Slides up from bottom, properly aligned)
+       FLOATING ACTION BUTTONS ON SCROLL (Bottom Center, Within Cars Section)
        ========================================================================== -->
   <div class="floating-scroll-actions" id="floatingScrollActions" role="region" aria-label="Quick Service Selection">
-    <button class="scroll-action-btn active" id="scrollTabSelfDrive" type="button" onclick="setBookingMode('Self Drive')">
-      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="3" y="11" width="18" height="9" rx="2" />
-        <circle cx="7.5" cy="16.5" r="1.5" />
-        <circle cx="16.5" cy="16.5" r="1.5" />
-        <path d="M5 11l2-6h10l2 6" />
-      </svg>
-      <span>Self Drive</span>
-    </button>
-    <button class="scroll-action-btn" id="scrollTabWithDriver" type="button" onclick="setBookingMode('With Driver')">
-      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-        <circle cx="9" cy="7" r="4" />
-        <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-      </svg>
-      <span>Rent a Car (with driver)</span>
-    </button>
+    <div class="floating-scroll-card">
+      <button class="scroll-tab-btn active" id="scrollTabSelfDrive" type="button" onclick="setBookingMode('Self Drive')">
+        <span class="scroll-tab-title">Self Drive</span>
+        <span class="scroll-tab-sub">Short trips, upto 7 days</span>
+      </button>
+      <button class="scroll-tab-btn" id="scrollTabWithDriver" type="button" onclick="setBookingMode('With Driver')">
+        <span class="scroll-tab-title">Rent a Car (with driver)</span>
+        <span class="scroll-tab-sub">Chauffeur driven</span>
+      </button>
+    </div>
   </div>
 
   <!-- Quick Hubs Modal / Dropdown info -->
@@ -1393,19 +1366,32 @@
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-      // 1. Floating Bottom Actions Trigger on Scroll
-      const heroActions = document.getElementById('searchWidget');
+      // 1. Floating Bottom Actions Trigger on Scroll (Only visible within Cars Section)
+      const carsSection = document.getElementById('popularCarsSection');
       const floatingScrollActions = document.getElementById('floatingScrollActions');
 
-      window.addEventListener('scroll', () => {
-        if (!floatingScrollActions) return;
-        const triggerPoint = heroActions ? (heroActions.offsetTop + heroActions.offsetHeight) : 280;
-        if (window.scrollY > triggerPoint - 80) {
+      function updateFloatingActionsVisibility() {
+        if (!floatingScrollActions || !carsSection) return;
+
+        const carsRect = carsSection.getBoundingClientRect();
+        
+        // 1. Has scrolled past hero section: carsSection top has reached or passed near the top of the viewport
+        const hasScrolledPastHero = carsRect.top <= 120;
+
+        // 2. Not below cars section: bottom of cars section is still in or near the viewport
+        // Once user scrolls past the cars section, carsRect.bottom < 150
+        const isWithinCarsSection = hasScrolledPastHero && (carsRect.bottom >= 150);
+
+        if (isWithinCarsSection) {
           floatingScrollActions.classList.add('is-visible');
         } else {
           floatingScrollActions.classList.remove('is-visible');
         }
-      }, { passive: true });
+      }
+
+      window.addEventListener('scroll', updateFloatingActionsVisibility, { passive: true });
+      window.addEventListener('resize', updateFloatingActionsVisibility, { passive: true });
+      updateFloatingActionsVisibility();
 
       // 2. Category Filter Pills
       const filterPills = document.querySelectorAll('.filter-pill');
