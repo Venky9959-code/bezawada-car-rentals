@@ -50,13 +50,13 @@ body {
    ========================================================================== */
 
 /* ==========================================================================
-   1. HERO ACTION BUTTONS (Revv Style Curved Container with Pill Switcher)
+   1. HERO ACTION BUTTONS (Revv Style Floating Capsule Pill with Smooth Glider)
    ========================================================================== */
 
 .hero-action-tabs-container {
     display: flex;
     justify-content: center;
-    margin: -42px auto 30px;
+    margin: -45px auto 35px;
     position: relative;
     z-index: 35;
     padding: 0 20px;
@@ -65,32 +65,59 @@ body {
 }
 
 .hero-action-tabs-card {
+    position: relative;
     background: #FFFFFF;
-    border-radius: 36px 36px 28px 28px;
-    padding: 10px 16px;
+    border-radius: 9999px;
+    padding: 6px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 16px;
-    box-shadow: 0 -8px 28px rgba(0, 0, 0, 0.04), 0 16px 36px rgba(15, 23, 42, 0.08);
-    border: 1px solid rgba(226, 232, 240, 0.85);
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12), 0 2px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(226, 232, 240, 0.95);
     width: 100%;
+    max-width: 760px;
+    user-select: none;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.hero-action-tabs-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 48px rgba(15, 23, 42, 0.16);
+}
+
+/* Smooth Swap Sliding Glider */
+.tab-sliding-glider {
+    position: absolute;
+    top: 6px;
+    bottom: 6px;
+    left: 6px;
+    width: calc(50% - 6px);
+    border-radius: 9999px;
+    background: linear-gradient(135deg, #0e8354 0%, #096841 100%);
+    box-shadow: 0 6px 20px rgba(14, 131, 84, 0.38);
+    transition: transform 0.38s cubic-bezier(0.25, 1, 0.5, 1);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hero-action-tabs-card.mode-driver .tab-sliding-glider {
+    transform: translateX(100%);
 }
 
 .revv-tab-btn {
+    position: relative;
+    z-index: 2;
     flex: 1;
-    background: transparent;
+    background: transparent !important;
     border: none;
     border-radius: 9999px;
-    padding: 14px 28px;
+    padding: 12px 24px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    position: relative;
+    transition: all 0.25s ease;
 }
 
 .revv-tab-btn .revv-tab-title {
@@ -99,7 +126,7 @@ body {
     font-weight: 600;
     color: var(--slate-800);
     line-height: 1.25;
-    transition: color 0.25s ease;
+    transition: color 0.3s ease;
 }
 
 .revv-tab-btn .revv-tab-sub {
@@ -109,20 +136,7 @@ body {
     font-weight: 400;
     line-height: 1.3;
     margin-top: 3px;
-    transition: color 0.25s ease;
-}
-
-.revv-tab-btn:hover:not(.active) {
-    background: rgba(15, 125, 73, 0.06);
-}
-
-.revv-tab-btn:hover:not(.active) .revv-tab-title {
-    color: #0f7d49;
-}
-
-.revv-tab-btn.active {
-    background: linear-gradient(135deg, #0e8354 0%, #096841 100%);
-    box-shadow: 0 8px 24px rgba(14, 131, 84, 0.35);
+    transition: color 0.3s ease;
 }
 
 .revv-tab-btn.active .revv-tab-title {
@@ -141,12 +155,16 @@ body {
         padding: 0 14px;
     }
     .hero-action-tabs-card {
-        border-radius: 28px;
-        padding: 8px 10px;
-        gap: 8px;
+        padding: 5px;
+    }
+    .tab-sliding-glider {
+        top: 5px;
+        bottom: 5px;
+        left: 5px;
+        width: calc(50% - 5px);
     }
     .revv-tab-btn {
-        padding: 10px 14px;
+        padding: 10px 12px;
     }
     .revv-tab-btn .revv-tab-title {
         font-size: 14.5px;
@@ -903,20 +921,47 @@ input[type="datetime-local"].field-input::-webkit-calendar-picker-indicator:hove
 }
 
 .floating-scroll-card {
-    background: rgba(255, 255, 255, 0.96);
+    position: relative;
+    background: rgba(255, 255, 255, 0.97);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
     border: 1px solid rgba(226, 232, 240, 0.95);
     border-radius: 9999px;
-    padding: 6px 8px;
+    padding: 5px;
     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2), 0 4px 12px rgba(0, 0, 0, 0.06);
     display: flex;
     align-items: center;
-    gap: 6px;
+    user-select: none;
+    transition: transform 0.25s ease;
+}
+
+.floating-scroll-card:hover {
+    transform: scale(1.02);
+}
+
+.scroll-tab-glider {
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+    width: calc(50% - 5px);
+    border-radius: 9999px;
+    background: linear-gradient(135deg, #0e8354 0%, #096841 100%);
+    box-shadow: 0 4px 16px rgba(14, 131, 84, 0.38);
+    transition: transform 0.38s cubic-bezier(0.25, 1, 0.5, 1);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.floating-scroll-card.mode-driver .scroll-tab-glider {
+    transform: translateX(100%);
 }
 
 .scroll-tab-btn {
-    background: transparent;
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    background: transparent !important;
     border: none;
     border-radius: 9999px;
     padding: 10px 22px;
@@ -926,7 +971,7 @@ input[type="datetime-local"].field-input::-webkit-calendar-picker-indicator:hove
     align-items: center;
     justify-content: center;
     text-align: center;
-    transition: all 0.25s ease;
+    transition: color 0.3s ease;
     white-space: nowrap;
 }
 
@@ -936,6 +981,7 @@ input[type="datetime-local"].field-input::-webkit-calendar-picker-indicator:hove
     font-weight: 600;
     color: var(--slate-800);
     line-height: 1.2;
+    transition: color 0.3s ease;
 }
 
 .scroll-tab-btn .scroll-tab-sub {
@@ -945,19 +991,7 @@ input[type="datetime-local"].field-input::-webkit-calendar-picker-indicator:hove
     font-weight: 500;
     line-height: 1.2;
     margin-top: 2px;
-}
-
-.scroll-tab-btn:hover:not(.active) {
-    background: rgba(15, 125, 73, 0.08);
-}
-
-.scroll-tab-btn:hover:not(.active) .scroll-tab-title {
-    color: #0f7d49;
-}
-
-.scroll-tab-btn.active {
-    background: linear-gradient(135deg, #0e8354 0%, #096841 100%);
-    box-shadow: 0 6px 18px rgba(14, 131, 84, 0.38);
+    transition: color 0.3s ease;
 }
 
 .scroll-tab-btn.active .scroll-tab-title {
@@ -974,8 +1008,13 @@ input[type="datetime-local"].field-input::-webkit-calendar-picker-indicator:hove
         bottom: 16px;
     }
     .floating-scroll-card {
-        padding: 4px 6px;
-        gap: 4px;
+        padding: 4px;
+    }
+    .scroll-tab-glider {
+        top: 4px;
+        bottom: 4px;
+        left: 4px;
+        width: calc(50% - 4px);
     }
     .scroll-tab-btn {
         padding: 8px 14px;
