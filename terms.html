@@ -42,30 +42,36 @@
         </div>
       </a>
 
+      <!-- Desktop Navigation Menu -->
       <nav class="desktop-nav">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="index.html#popularCarsSection" class="nav-link">Our Fleet</a>
         <a href="about.html" class="nav-link">About Us</a>
         <a href="blog.html" class="nav-link">Blog</a>
-        <a href="contact.html" class="nav-link">Contact Us</a>
+        <a href="contact.html" class="nav-link">Contact</a>
         <a href="terms.html" class="nav-link active">Terms</a>
       </nav>
 
+      <!-- Header Right CTA Buttons -->
       <div class="header-actions">
-        <a href="https://wa.me/919393093095?text=Hello%20Bezawada%20Car%20Rentals!%20I%20have%20a%20query%20about%20your%20terms%20and%20booking."
-          target="_blank" rel="noopener noreferrer" class="action-btn hotline-btn">
+        <a href="https://wa.me/919393093095?text=Hello%20Bezawada%20Car%20Rentals!%20I%20would%20like%20to%20inquire%20about%20booking%20a%20car."
+          target="_blank" rel="noopener noreferrer" class="action-btn hotline-btn"
+          title="Call or WhatsApp Bezawada Car Rentals">
           <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"
             stroke-linecap="round" stroke-linejoin="round">
             <path
               d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
             </path>
           </svg>
-          <span class="hotline-text">+91 93930 93095</span>
+          <span class="hotline-text"> Contact Us </span>
         </a>
 
-        <a href="index.html#popularCarsSection" class="action-btn login-btn">
-          <span>Book a Car</span>
-        </a>
+        <button type="button" class="action-btn login-btn" onclick="scrollToBooking()">
+          <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+          <span>Book Now</span>
+        </button>
       </div>
     </div>
   </header>
@@ -80,8 +86,8 @@
       <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close menu">&times;</button>
     </div>
     <div class="mobile-drawer-body">
-      <a href="index.html" class="drawer-link">Home</a>
-      <a href="index.html#popularCarsSection" class="drawer-link">Explore Fleet</a>
+      <a href="index.html#searchWidget" class="drawer-link" onclick="scrollToBooking()">Book a Car</a>
+      <a href="index.html#popularCarsSection" class="drawer-link" onclick="scrollToBooking()">Explore Fleet</a>
       <a href="about.html" class="drawer-link">About Us</a>
       <a href="blog.html" class="drawer-link">Blog &amp; Travel Guides</a>
       <a href="contact.html" class="drawer-link">Contact Us</a>
@@ -261,63 +267,110 @@
     </div>
   </main>
 
-  <!-- Site Footer -->
-  <footer class="site-footer">
-    <div class="footer-container">
-      <div class="footer-grid">
-        <div class="footer-col footer-col-brand">
-          <div class="footer-brand">
-            <img src="logo/logo.jpeg" alt="Bezawada Car Rentals" class="footer-logo">
-            <span class="footer-brand-title">BEZAWADA CARS</span>
-          </div>
-          <p class="footer-desc">Vijayawada's #1 trusted self-drive &amp; chauffeur car rental platform. Seamless bookings, pristine sanitized fleet, and 24/7 dedicated support across Andhra Pradesh.</p>
+  <!-- ==========================================================================
+       SECTION 7: FOOTER SECTION (4 Columns, Trust Ribbon, Copyright & Back to Top)
+       ========================================================================== -->
+  <footer class="site-footer" id="siteFooter" role="contentinfo">
+    <div class="footer-top-wrap">
+      <div class="footer-main-grid">
+
+        <!-- Col 1: Brand Info -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="footer-logo-link">
+            <img src="logo/logo.jpeg" alt="Bezawada Car Rentals Logo" class="footer-logo-img">
+            <div class="footer-brand-title">
+              BEZAWADA
+              <span>CAR RENTALS</span>
+            </div>
+          </a>
+          <p class="footer-about-text">
+            Vijayawada's premier car rental agency providing self-drive cars and Car with Driver luxury rides with
+            seamless doorstep delivery, well-maintained vehicles, and transparent pricing.
+          </p>
         </div>
 
+        <!-- Col 2: Fleet & Rentals -->
         <div class="footer-col">
-          <h3 class="footer-col-title">Quick Links</h3>
+          <h3 class="footer-col-title">Company</h3>
           <ul class="footer-nav-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#popularCarsSection">Our Fleet (9 Cars)</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="blog.html">Travel Blog &amp; Guides</a></li>
             <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="terms.html">Terms &amp; Conditions</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="terms.html">Terms and Conditions <span class="badge-mini">Popular</span></a></li>
+            <li><a href="terms.html">Privacy Policy</a></li>
+            <li><a href="blog.html">Blog</a></li>
           </ul>
         </div>
 
+
         <div class="footer-col">
-          <h3 class="footer-col-title">Prime Hubs in Vijayawada</h3>
-          <ul class="footer-nav-list">
-            <li><a href="contact.html">Gannavaram Airport (VGA)</a></li>
-            <li><a href="contact.html">Benz Circle Hub</a></li>
-            <li><a href="contact.html">Vijayawada Junction Railway Station</a></li>
-            <li><a href="contact.html">Pandit Nehru Bus Station (PNBS)</a></li>
-            <li><a href="contact.html">Auto Nagar / Poranki</a></li>
-          </ul>
+          <h3 class="footer-col-title">Follow Us</h3>
+          <div class="footer-social-links">
+            <a href="https://wa.me/919393093095" target="_blank" rel="noopener" class="footer-social-btn"
+              aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path
+                  d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.592 2.654-.696c1.004.582 1.777.822 2.806.822 3.181 0 5.767-2.587 5.767-5.766.001-3.182-2.585-5.805-5.767-5.805zm3.377 8.21c-.14.393-.715.753-1.009.799-.283.044-.645.064-1.04-.063-.585-.188-1.339-.533-2.316-1.511-.98-.98-1.325-1.734-1.514-2.32-.127-.395-.107-.757-.063-1.04.046-.294.406-.869.799-1.009.19-.068.396-.039.544.073l.87 1.258c.148.214.156.495.021.718l-.348.572c-.068.112-.083.247-.04.37.199.57.653 1.189 1.183 1.719.53.53 1.149.984 1.719 1.183.123.043.258.028.37-.04l.572-.348c.223-.135.504-.127.718.021l1.258.87c.112.148.141.354.073.544z" />
+                <path
+                  d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.176L2 22l4.965-1.399C8.423 21.503 10.155 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18c-1.637 0-3.167-.47-4.464-1.284l-.32-.2-3.149.887.886-3.085-.207-.328C3.896 14.673 3.428 13.155 3.428 11.5 3.428 6.772 7.272 2.928 12 2.928 16.728 2.928 20.572 6.772 20.572 11.5 20.572 16.228 16.728 20 12 20z" />
+              </svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-btn"
+              aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-btn"
+              aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#070B14" />
+              </svg>
+            </a>
+          </div>
         </div>
 
         <div class="footer-col">
-          <h3 class="footer-col-title">Contact &amp; Support</h3>
-          <ul class="footer-nav-list">
-            <li><a href="tel:+919393093095">Phone: +91 93930 93095</a></li>
-            <li><a href="https://wa.me/919393093095" target="_blank">WhatsApp: 24/7 Booking</a></li>
-            <li><a href="terms.html">Terms &amp; Conditions</a></li>
-            <li><a href="contact.html">Send an Inquiry</a></li>
-          </ul>
+          <h3 class="footer-col-title">Get In Touch</h3>
+          <a href="mailto:support@bezawadacarrentals.com" class="footer-contact-row">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span>support@bezawadacarrentals.com</span>
+          </a>
         </div>
       </div>
+    </div>
 
-      <div class="footer-bottom-bar">
-        <div class="footer-bottom-inner">
-          <div class="footer-copyright">
-            &copy; 2026 Bezawada Car Rentals. All rights reserved.
-          </div>
-          <div class="footer-bottom-links">
-            <a href="terms.html">Terms &amp; Conditions</a>
-            <a href="about.html">About Us</a>
-            <a href="contact.html">Contact</a>
-            <a href="blog.html">Blog</a>
-          </div>
+    <!-- Footer Bottom Bar -->
+    <div class="footer-bottom-bar">
+      <div class="footer-bottom-inner">
+        <div class="footer-copyright">
+          © 2026 Bezawada Car Rentals. All rights reserved.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="terms.html">Terms &amp; Conditions</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="blog.html">Blog</a>
+          <button class="btn-back-to-top" type="button" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+            aria-label="Back to top">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+            <span>Top</span>
+          </button>
         </div>
       </div>
     </div>
@@ -330,10 +383,19 @@
     const mobileDrawer = document.getElementById('mobileDrawer');
 
     if (mobileMenuBtn && mobileDrawer) {
-      mobileMenuBtn.addEventListener('click', () => mobileDrawer.classList.add('is-open'));
+      mobileMenuBtn.addEventListener('click', () => mobileDrawer.classList.add('active'));
     }
     if (drawerCloseBtn && mobileDrawer) {
-      drawerCloseBtn.addEventListener('click', () => mobileDrawer.classList.remove('is-open'));
+      drawerCloseBtn.addEventListener('click', () => mobileDrawer.classList.remove('active'));
+    }
+    document.addEventListener('click', (e) => {
+      if (mobileDrawer && mobileDrawer.classList.contains('active') && !mobileDrawer.contains(e.target) && mobileMenuBtn && !mobileMenuBtn.contains(e.target)) {
+        mobileDrawer.classList.remove('active');
+      }
+    });
+
+    function scrollToBooking() {
+      window.location.href = 'index.html#popularCarsSection';
     }
   </script>
 

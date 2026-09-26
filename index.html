@@ -248,21 +248,7 @@
   <div class="page-wrapper" id="bookingPageWrapper">
 
     <!-- 1. Two Action Buttons below Hero Section (Revv Style Floating Capsule Pill) -->
-    <div class="hero-action-tabs-container" id="searchWidget" role="tablist">
-      <div class="hero-action-tabs-card" id="heroTabsCard">
-        <div class="tab-sliding-glider" id="heroTabGlider"></div>
-        <button class="revv-tab-btn active" id="tabSelfDrive" type="button" role="tab" aria-selected="true"
-          onclick="setBookingMode('Self Drive')">
-          <span class="revv-tab-title">Self Drive</span>
-          <span class="revv-tab-sub">Short trips, upto 7 days</span>
-        </button>
-        <button class="revv-tab-btn" id="tabWithDriver" type="button" role="tab" aria-selected="false"
-          onclick="setBookingMode('With Driver')">
-          <span class="revv-tab-title">Rent a Car (with driver)</span>
-          <span class="revv-tab-sub">Car with Driver, long or daily</span>
-        </button>
-      </div>
-    </div>
+
 
     <!-- 2. Popular Cars Section (Horizontal Single-Line Slider) -->
     <section class="cars-section is-active" id="popularCarsSection">
@@ -271,6 +257,23 @@
         <h2>Find Popular Cars in Vijayawada</h2>
         <p>Choose from available self-drive and (Car with Driver) cars in Vijayawada based on your location, travel
           dates, car type and trip requirements.</p>
+        <br>
+        <br><br>
+        <div class="hero-action-tabs-container" id="searchWidget" role="tablist">
+          <div class="hero-action-tabs-card" id="heroTabsCard">
+            <div class="tab-sliding-glider" id="heroTabGlider"></div>
+            <button class="revv-tab-btn active" id="tabSelfDrive" type="button" role="tab" aria-selected="true"
+              onclick="setBookingMode('Self Drive')">
+              <span class="revv-tab-title">Self Drive</span>
+              <span class="revv-tab-sub">Short trips, upto 7 days</span>
+            </button>
+            <button class="revv-tab-btn" id="tabWithDriver" type="button" role="tab" aria-selected="false"
+              onclick="setBookingMode('With Driver')">
+              <span class="revv-tab-title">Rent a Car (with driver)</span>
+              <span class="revv-tab-sub">Car with Driver, long or daily</span>
+            </button>
+          </div>
+        </div>
 
         <!-- Category Filter Pills -->
         <div class="filter-pills-bar filter-pills-row" role="tablist">
