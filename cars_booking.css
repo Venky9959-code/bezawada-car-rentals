@@ -500,19 +500,22 @@ input[type="datetime-local"].field-input::-webkit-calendar-picker-indicator:hove
 }
 
 /* Filter Pills Container */
-.filter-pills-bar {
+.filter-pills-bar,
+.filter-pills-row {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 12px;
+    margin-top: 24px;
     margin-bottom: 38px;
+    width: 100%;
 }
 
 .filter-pill {
     background: #FFFFFF;
     border: 1.5px solid var(--slate-200);
-    padding: 8px 20px;
+    padding: 9px 20px;
     border-radius: var(--radius-pill);
     font-family: var(--font-body);
     font-size: 14px;
@@ -520,10 +523,12 @@ input[type="datetime-local"].field-input::-webkit-calendar-picker-indicator:hove
     color: var(--slate-700);
     cursor: pointer;
     transition: all 0.25s ease;
-    display: flex;
+    display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 6px;
     box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03);
+    white-space: nowrap;
 }
 
 .filter-pill:hover {
