@@ -63,6 +63,10 @@ function initMobileDrawer() {
   menuBtn.addEventListener('click', openDrawer);
   closeBtn.addEventListener('click', closeDrawer);
 
+  drawer.querySelectorAll('.drawer-link').forEach(link => {
+    link.addEventListener('click', closeDrawer);
+  });
+
   document.addEventListener('click', (e) => {
     if (drawer.classList.contains('active') && !drawer.contains(e.target) && !menuBtn.contains(e.target)) {
       closeDrawer();

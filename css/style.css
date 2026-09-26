@@ -298,7 +298,9 @@ select {
   top: 0;
   left: 0;
   width: 290px;
+  max-width: min(300px, 85vw);
   height: 100vh;
+  height: 100dvh;
   background-color: var(--color-white);
   z-index: 200;
   box-shadow: 10px 0 30px rgba(0, 0, 0, 0.15);
@@ -333,6 +335,8 @@ select {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .drawer-link {
@@ -1751,6 +1755,17 @@ select {
 }
 
 /* ==========================================================================
+   Tablet, Laptop & Desktop Viewport Enhancements
+   ========================================================================== */
+
+@media (min-width: 769px) and (max-width: 1440px) {
+  .hero-stage {
+    max-width: calc(100% - 32px);
+    margin: 0 auto;
+  }
+}
+
+/* ==========================================================================
    Mobile Specific Adjustments
    ========================================================================== */
 
@@ -1770,8 +1785,17 @@ select {
     height: 38px;
   }
 
-  .hero-stage {
+  .hero-stage,
+  .hero-exact-banner-container {
     border-radius: 0;
+    max-width: 100%;
+    margin: 0;
+    box-shadow: none;
+  }
+
+  .hero-find-car-hotspot {
+    min-width: 70px;
+    min-height: 38px;
   }
 
   .hero-main-card {
