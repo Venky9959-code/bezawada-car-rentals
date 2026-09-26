@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
     rel="stylesheet">
 
   <!-- Unified Stylesheets in requested order -->
@@ -119,33 +119,47 @@
       <!-- Hero Overlay Content Grid -->
       <div class="hero-content-wrapper">
 
-        <!-- Right Side: Animated Revv Showcase -->
+        <!-- Hero Showcase Container -->
         <div class="hero-right-container revv-exact-showcase" id="revvShowcase">
 
-          <!-- Revv Synchronized Animated Header Block -->
-          <div class="revv-rating-block" id="revvDynamicHeader">
-            <div class="header-slide-content" id="headerSlideContent">
-              <div class="rating-badge-card">
-                <div class="rating-score">
-                  <svg viewBox="0 0 24 24" width="22" height="22" fill="#08919A" class="star-fill">
-                    <polygon
-                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                  </svg>
-                  <span>4.6</span>
-                </div>
-                <div class="rating-stars-row">
-                  <span>★</span>
-                  <span>★</span>
-                  <span>★</span>
-                  <span>★</span>
-                  <span>★</span>
-                </div>
-              </div>
-              <h2 class="rating-headline">
-                <span class="headline-pill">Rated</span> by <span class="highlight-cyan">100K+</span> Happy Drivers
-              </h2>
-              <p class="rating-subtext">Vijayawada's #1 trusted self-drive car rental service</p>
+          <!-- Hero Top Split Row: Left Big Impact Headline + Right Animated Revv Rating -->
+          <div class="hero-top-split-row">
+
+            <!-- Left Side: Bold Headline (Matching reference photo typography) -->
+            <div class="hero-impact-headline-box">
+              <h1 class="hero-impact-title">
+                BEST SELF DRIVE CAR RENTALS<br>
+                ACROSS VIJAYAWADA <br>
+                <span class="hero-impact-sub">- EASY AFFORDABLE &amp; FLEXIBLE</span>
+              </h1>
             </div>
+
+            <!-- Revv Synchronized Animated Header Block -->
+            <div class="revv-rating-block" id="revvDynamicHeader">
+              <div class="header-slide-content" id="headerSlideContent">
+                <div class="rating-badge-card">
+                  <div class="rating-score">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="#08919A" class="star-fill">
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                    </svg>
+                    <span>4.6</span>
+                  </div>
+                  <div class="rating-stars-row">
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                  </div>
+                </div>
+                <h2 class="rating-headline">
+                  <span class="headline-pill">Rated</span> by <span class="highlight-cyan">100K+</span> Happy Drivers
+                </h2>
+                <p class="rating-subtext">Vijayawada's #1 trusted self-drive car rental service</p>
+              </div>
+            </div>
+
           </div>
 
           <!-- Exactly the 5 Revv Stat Cards from the image (Interactive Animated Carousel) -->
@@ -281,16 +295,8 @@
         </div>
       </div>
 
-      <!-- Single Line Cars Slider Container with Round Next & Prev Buttons -->
+      <!-- Single Line Cars Slider Container -->
       <div class="cars-slider-wrapper">
-
-        <button class="slider-round-btn prev-btn" id="sliderPrevBtn" aria-label="Previous Cars" type="button"
-          onclick="scrollCarsSlider(-1)">
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.6"
-            stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="15 18 9 12 15 6"></polyline>
-          </svg>
-        </button>
 
         <!-- 1. All 24 Self Drive Cars Single-Line Track -->
         <div class="cars-slider-track" id="carsSliderTrack">
@@ -1839,14 +1845,6 @@
 
         </div>
 
-        <button class="slider-round-btn next-btn" id="sliderNextBtn" aria-label="Next Cars" type="button"
-          onclick="scrollCarsSlider(1)">
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.6"
-            stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="9 18 15 12 9 6"></polyline>
-          </svg>
-        </button>
-
       </div>
 
 
@@ -1881,13 +1879,13 @@
       <div class="stat-box">
         <h2 class="counter" data-target="100" data-suffix="+">0+</h2>
         <p>
-          Cars in Fleet
+          Happy Customers
         </p>
       </div>
 
       <!-- Box 3 -->
       <div class="stat-box">
-        <h2 class="counter" data-target="5" data-suffix="+">0+</h2>
+        <h2 class="counter" data-target="10" data-suffix="+">0+</h2>
         <p>
           Years Experience
         </p>

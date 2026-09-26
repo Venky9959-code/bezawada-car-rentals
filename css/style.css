@@ -759,6 +759,77 @@ select {
   padding: 10px 0 10px;
 }
 
+/* Hero Top Split Row: Left Big Impact Headline + Right Rating Block */
+.hero-top-split-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.hero-impact-headline-box {
+  flex: 1 1 65%;
+  max-width: 760px;
+  padding-top: 4px;
+}
+
+.hero-impact-title {
+  font-family: 'Oswald', 'Outfit', sans-serif;
+  font-size: clamp(2.2rem, 3.6vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7), 0 2px 6px rgba(0, 0, 0, 0.5);
+  margin: 0;
+}
+
+.hero-impact-sub {
+  color: #FFFFFF;
+  font-size: clamp(1.4rem, 2.4vw, 2.2rem);
+  letter-spacing: 0.8px;
+  display: block;
+  margin-top: 6px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7), 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 991px) {
+  .hero-top-split-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .hero-impact-headline-box {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .hero-impact-title {
+    font-size: 2.1rem;
+    line-height: 1.2;
+  }
+
+  .hero-impact-sub {
+    font-size: 1.35rem;
+  }
+
+  .revv-rating-block {
+    align-items: flex-start !important;
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .header-slide-content {
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+}
+
 /* Rating Block (Placed on Right Side) */
 .revv-rating-block {
   position: relative;

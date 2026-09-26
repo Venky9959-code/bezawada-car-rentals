@@ -582,8 +582,9 @@ input[type="datetime-local"].field-input::-webkit-calendar-picker-indicator:hove
     scroll-snap-align: start;
 }
 
-/* Round Previous & Next Navigation Buttons */
+/* Round Previous & Next Navigation Buttons (Removed per user request) */
 .slider-round-btn {
+    display: none !important;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
