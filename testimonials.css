@@ -476,3 +476,42 @@
         justify-content: center;
     }
 }
+
+@media (max-width: 576px) {
+    .testimonials-section {
+        padding: 40px 16px 30px;
+    }
+
+    .testimonials-header h2 {
+        font-size: 26px;
+        line-height: 1.25;
+    }
+
+    .testimonials-header .description {
+        font-size: 14.5px;
+    }
+
+    .testimonials-rating-pill {
+        padding: 6px 14px;
+        font-size: 12.5px;
+    }
+
+    .testimonial-video-card {
+        flex: 0 0 260px;
+        width: 260px;
+        height: 380px;
+        border-radius: 16px;
+    }
+
+    .testimonial-video-card h3 {
+        font-size: 19px;
+    }
+
+    .video-modal-overlay {
+        padding: 12px;
+    }
+
+    .video-modal-box {
+        border-radius: 16px;
+    }
+}

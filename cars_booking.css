@@ -1750,6 +1750,70 @@ input[type="datetime-local"].field-input::-webkit-calendar-picker-indicator:hove
     }
 }
 
+@media (max-width: 640px) {
+    .cta-actions-row {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .btn-cta-whatsapp,
+    .btn-cta-call {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .booking-cta-section {
+        padding: 0 16px;
+    }
+
+    .cta-banner-card {
+        padding: 36px 18px;
+        border-radius: 20px;
+    }
+
+    .cta-title {
+        font-size: 25px;
+    }
+
+    .cta-desc {
+        font-size: 14px;
+        margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cars-slider-track .car-card {
+        flex: 0 0 85vw;
+        max-width: 85vw;
+    }
+
+    .cars-header h2 {
+        font-size: 22px;
+    }
+
+    .cars-header p {
+        font-size: 13.5px;
+    }
+
+    .filter-pills-bar {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        flex-wrap: nowrap;
+        padding-bottom: 6px;
+        scrollbar-width: none;
+    }
+
+    .filter-pills-bar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .filter-pill {
+        flex-shrink: 0;
+        white-space: nowrap;
+    }
+}
+
 /* ==========================================================================
    DRIVER PACKAGES (CHAUFFEUR DRIVEN TARIFF)
    ========================================================================== */

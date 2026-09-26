@@ -1156,20 +1156,42 @@ select {
 
 @media (max-width: 991px) {
   .revv-rating-block {
-    margin-left: auto;
+    margin-left: 0;
     margin-right: 0;
-    align-items: flex-end;
-    text-align: right;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .rating-badge-card {
+    align-self: flex-start;
+    align-items: flex-start;
   }
 
   .rating-headline {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+    text-align: left;
+  }
+
+  .rating-subtext {
+    text-align: left;
+  }
+
+  .rating-subtext::after {
+    left: 0;
+    right: auto;
   }
 
   .revv-stats-cards-wrapper {
     width: 100%;
     justify-content: flex-start;
     margin-left: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .revv-stats-cards-wrapper::-webkit-scrollbar {
+    display: none;
   }
 
   .revv-stat-box {
@@ -1181,6 +1203,56 @@ select {
 
   .stat-box-title {
     font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-stage {
+    min-height: auto;
+    border-radius: var(--radius-lg);
+  }
+
+  .hero-content-wrapper {
+    padding: 24px 16px 20px;
+    min-height: auto;
+    gap: 22px;
+  }
+
+  .hero-impact-title {
+    font-size: 1.62rem;
+    line-height: 1.18;
+    letter-spacing: 0.3px;
+  }
+
+  .hero-impact-sub {
+    font-size: 1.12rem;
+    letter-spacing: 0.4px;
+    margin-top: 4px;
+  }
+
+  .revv-stat-box {
+    width: 96px;
+    min-width: 96px;
+    height: 100px;
+    padding: 8px 6px;
+  }
+
+  .stat-box-icon {
+    height: 28px;
+    margin-bottom: 4px;
+  }
+
+  .stat-box-icon-circle {
+    width: 30px;
+    height: 30px;
+  }
+
+  .stat-box-title {
+    font-size: 0.85rem;
+  }
+
+  .stat-box-sub {
+    font-size: 0.72rem;
   }
 }
 
