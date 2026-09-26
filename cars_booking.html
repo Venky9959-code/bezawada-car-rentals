@@ -143,6 +143,8 @@
             <!-- Category Filter Pills -->
             <div class="filter-pills-bar" role="tablist">
                 <button class="filter-pill active" data-category="all" type="button">All Cars</button>
+                <button class="filter-pill" data-category="automatic" type="button">Automatic</button>
+                <button class="filter-pill" data-category="manual" type="button">Manual</button>
                 <button class="filter-pill" data-category="home-delivery" type="button">Home Delivery</button>
                 <button class="filter-pill" data-category="hatchback" type="button">Hatchback</button>
                 <button class="filter-pill" data-category="suv" type="button">SUV</button>
@@ -164,7 +166,7 @@
                 <div class="cars-slider-track" id="carsSliderTrack">
 
                     <!-- 1. Baleno -->
-                    <div class="car-card" data-category="hatchback home-delivery guest-fav" tabindex="0">
+                    <div class="car-card" data-category="hatchback home-delivery guest-fav manual" tabindex="0">
                         <div class="card-media">
                             <img src="cars/Baleno.jpeg" alt="Maruti Suzuki Baleno" class="img-align-baleno" loading="lazy">
                             <button class="btn-wishlist" type="button" aria-label="Add to wishlist" onclick="toggleWishlist(this, event)">
@@ -185,7 +187,7 @@
                             <div class="car-specs">Manual • Petrol • 5 Seats</div>
                             <div class="card-perks">
                                 <div class="perk-item">
-                                    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                                     <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
                                     <span>Doorstep Delivery Available</span>
                                 </div>
                                 <div class="perk-item">
@@ -204,7 +206,7 @@
                     </div>
 
                     <!-- 2. Creta -->
-                    <div class="car-card" data-category="suv home-delivery guest-fav" tabindex="0">
+                    <div class="car-card" data-category="suv home-delivery guest-fav automatic" tabindex="0">
                         <div class="card-media">
                             <img src="cars/CRETA.jpeg" alt="Hyundai Creta" class="img-align-creta" loading="lazy">
                             <button class="btn-wishlist" type="button" aria-label="Add to wishlist" onclick="toggleWishlist(this, event)">
@@ -244,7 +246,7 @@
                     </div>
 
                     <!-- 3. Thar -->
-                    <div class="car-card" data-category="suv home-delivery" tabindex="0">
+                    <div class="car-card" data-category="suv home-delivery manual" tabindex="0">
                         <div class="card-media">
                             <img src="cars/THAR.jpeg" alt="Mahindra Thar" class="img-align-thar" loading="lazy">
                             <button class="btn-wishlist" type="button" aria-label="Add to wishlist" onclick="toggleWishlist(this, event)">
@@ -284,7 +286,7 @@
                     </div>
 
                     <!-- 4. Swift -->
-                    <div class="car-card" data-category="hatchback home-delivery" tabindex="0">
+                    <div class="car-card" data-category="hatchback home-delivery manual" tabindex="0">
                         <div class="card-media">
                             <img src="cars/SWIFT.jpeg" alt="Maruti Suzuki Swift" class="img-align-swift" loading="lazy">
                             <button class="btn-wishlist" type="button" aria-label="Add to wishlist" onclick="toggleWishlist(this, event)">
@@ -324,7 +326,7 @@
                     </div>
 
                     <!-- 5. Innova Crysta -->
-                    <div class="car-card" data-category="muv home-delivery guest-fav" tabindex="0">
+                    <div class="car-card" data-category="muv home-delivery guest-fav automatic" tabindex="0">
                         <div class="card-media">
                             <img src="cars/INNOVA CRYSTA.jpeg" alt="Toyota Innova Crysta" class="img-align-innova" loading="lazy">
                             <button class="btn-wishlist" type="button" aria-label="Add to wishlist" onclick="toggleWishlist(this, event)">
@@ -364,7 +366,7 @@
                     </div>
 
                     <!-- 6. Honda City -->
-                    <div class="car-card" data-category="sedan home-delivery" tabindex="0">
+                    <div class="car-card" data-category="sedan home-delivery automatic" tabindex="0">
                         <div class="card-media">
                             <img src="cars/Honda City.jpeg" alt="Honda City" class="img-align-city" loading="lazy">
                             <button class="btn-wishlist" type="button" aria-label="Add to wishlist" onclick="toggleWishlist(this, event)">
@@ -404,7 +406,7 @@
                     </div>
 
                     <!-- 7. Mercedes-Benz C220D -->
-                    <div class="car-card" data-category="luxury home-delivery" tabindex="0">
+                    <div class="car-card" data-category="luxury home-delivery automatic" tabindex="0">
                         <div class="card-media">
                             <img src="cars/BENZ C220D.jpeg" alt="Mercedes-Benz C220D" class="img-align-benz" loading="lazy">
                             <button class="btn-wishlist" type="button" aria-label="Add to wishlist" onclick="toggleWishlist(this, event)">
@@ -444,7 +446,7 @@
                     </div>
 
                     <!-- 8. BMW 320D -->
-                    <div class="car-card" data-category="luxury home-delivery" tabindex="0">
+                    <div class="car-card" data-category="luxury home-delivery automatic" tabindex="0">
                         <div class="card-media">
                             <img src="cars/BMW 320D.jpeg" alt="BMW 320D" class="img-align-bmw" loading="lazy">
                             <button class="btn-wishlist" type="button" aria-label="Add to wishlist" onclick="toggleWishlist(this, event)">
@@ -484,7 +486,7 @@
                     </div>
 
                     <!-- 9. XUV700 -->
-                    <div class="car-card" data-category="suv muv home-delivery" tabindex="0">
+                    <div class="car-card" data-category="suv muv home-delivery automatic" tabindex="0">
                         <div class="card-media">
                             <img src="cars/XUV700.jpeg" alt="Mahindra XUV700" class="img-align-xuv" loading="lazy">
                             <button class="btn-wishlist" type="button" aria-label="Add to wishlist" onclick="toggleWishlist(this, event)">
@@ -520,7 +522,6 @@
                         <div class="host-badge-bar">
                             <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                             Panoramic Sunroof • ADAS Safety
-                        </div>
                     </div>
 
                 </div>
@@ -839,11 +840,12 @@
                     filterPills.forEach(p => p.classList.remove('active'));
                     pill.classList.add('active');
 
-                    const category = pill.getAttribute('data-category');
+                    const category = (pill.getAttribute('data-category') || 'all').toLowerCase();
 
                     carCards.forEach(card => {
-                        const cardCats = card.getAttribute('data-category') || '';
-                        if (category === 'all' || cardCats.includes(category)) {
+                        const cardCats = (card.getAttribute('data-category') || '').toLowerCase();
+                        const catList = cardCats.split(/\s+/);
+                        if (category === 'all' || catList.includes(category)) {
                             card.style.display = 'flex';
                             card.style.animation = 'fadeIn 0.3s ease forwards';
                         } else {
