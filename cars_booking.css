@@ -34,7 +34,8 @@ body {
     background-color: #F8FAFC;
     color: var(--dark-navy);
     -webkit-font-smoothing: antialiased;
-    padding-bottom: 90px;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 /* Page Container */
