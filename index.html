@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="statistics.css">
   <link rel="stylesheet" href="best_places.css">
   <link rel="stylesheet" href="why_choose.css">
+  <link rel="stylesheet" href="testimonials.css">
 </head>
 
 <body>
@@ -58,22 +59,12 @@
         <a href="about.html" class="nav-link">About Us</a>
         <a href="blog.html" class="nav-link">Blog</a>
         <a href="contact.html" class="nav-link">Contact</a>
-        <a href="terms.html" class="nav-link">Terms</a>
+
       </nav>
 
       <!-- Header Right CTA Buttons -->
       <div class="header-actions">
-        <a href="https://wa.me/919393093095?text=Hello%20Bezawada%20Car%20Rentals!%20I%20would%20like%20to%20inquire%20about%20booking%20a%20car."
-          target="_blank" rel="noopener noreferrer" class="action-btn hotline-btn"
-          title="Call or WhatsApp Bezawada Car Rentals">
-          <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path
-              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
-            </path>
-          </svg>
-          <span class="hotline-text"> Contact Us </span>
-        </a>
+
 
         <button type="button" class="action-btn login-btn" onclick="scrollToBooking()">
           <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"
@@ -102,7 +93,7 @@
       <a href="about.html" class="drawer-link">About Us</a>
       <a href="blog.html" class="drawer-link">Blog &amp; Travel Guides</a>
       <a href="contact.html" class="drawer-link">Contact Us</a>
-      <a href="terms.html" class="drawer-link">Terms &amp; Conditions</a>
+
       <div class="drawer-divider"></div>
       <a href="https://wa.me/919393093095" target="_blank" rel="noopener noreferrer" class="drawer-phone">
         <span>Instant WhatsApp &amp; Call Booking:</span>
@@ -2187,7 +2178,388 @@
   </section>
 
   <!-- ==========================================================================
-       SECTION 6: CTA SECTION (Ready to Explore Vijayawada & Beyond? Direct WhatsApp & 24/7 Call)
+       SECTION 6: TESTIMONIALS SECTION (Video Testimonials Styled Like Best Places)
+       ========================================================================== -->
+  <section class="testimonials-section" id="testimonialsSection">
+
+    <div class="testimonials-header">
+      <span class="section-tag">CUSTOMER EXPERIENCES &amp; STORIES</span>
+      <h2>Real Stories from Real Drivers in Vijayawada</h2>
+      <p class="description">
+        Watch customer road trip video stories and read authentic reviews from travelers who explored Vijayawada,
+        Amaravati, and outstation destinations with our rental fleet.
+      </p>
+
+      <div class="testimonials-rating-pill">
+        <span class="stars">★★★★★</span>
+        <span><strong>4.9 / 5.0 Rating</strong> • 5,000+ Verified Road Trips &amp; Google Reviews</span>
+      </div>
+    </div>
+
+    <!-- Testimonials Marquee Carousel (Styled like Best Places) -->
+    <div class="testimonials-carousel-wrapper" id="testimonialsCarouselWrapper">
+
+      <div class="testimonials-marquee-track" id="testimonialsMarqueeTrack">
+
+        <!-- Marquee Group 1 -->
+        <div class="testimonials-marquee-group">
+
+          <!-- 1. Innova Crysta Family Review -->
+          <div class="testimonial-video-card"
+            onclick="openVideoModal('Karthik Varma & Family', 'Toyota Innova Crysta', 'Hyderabad Family Vacation', '5.0', 'Doorstep delivery at Benz Circle was right on the dot! Spotless Innova Crysta, zero deposit & unlimited kms made our Hyderabad vacation totally stress-free. Driving through the Vijayawada-Hyderabad expressway was pure joy.', 'assets/images/reviews/review_innova.jpg', 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4')">
+            <img src="assets/images/reviews/review_innova.jpg" alt="Toyota Innova Crysta Customer Review in Vijayawada"
+              loading="lazy">
+            <div class="card-gradient"></div>
+            <div class="card-badge">
+              <span class="badge-icon">★</span> 5.0 • Google Review
+            </div>
+            <div class="video-play-center">
+              <div class="video-play-btn-circle">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                  <polygon points="6 4 20 12 6 20 6 4"></polygon>
+                </svg>
+              </div>
+              <span class="video-play-badge">Watch Video</span>
+            </div>
+            <div class="card-info">
+              <span class="card-tag">INNOVA CRYSTA • HYDERABAD FAMILY TRIP</span>
+              <h3>Karthik Varma &amp; Family</h3>
+              <div class="card-rating-stars">★★★★★</div>
+              <p class="card-snippet">&ldquo;Spotless Innova Crysta delivered right at Benz Circle. Zero deposit &amp;
+                unlimited kms made our Hyderabad vacation amazing!&rdquo;</p>
+            </div>
+          </div>
+
+          <!-- 2. Mahindra Thar 4x4 Road Trip Review -->
+          <div class="testimonial-video-card"
+            onclick="openVideoModal('Sai Teja & Friends', 'Mahindra Thar 4x4', 'Araku Valley Road Trip', '5.0', 'Thar was an absolute beast on the Araku ghat roads! Flawless mechanical condition, timely pickup at Gannavaram airport, and no kilometer restrictions. Bezawada Car Rentals is undoubtedly the best in Andhra.', 'cars/THAR.jpeg', 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4')">
+            <img src="cars/THAR.jpeg" alt="Mahindra Thar 4x4 Customer Review" loading="lazy">
+            <div class="card-gradient"></div>
+            <div class="card-badge">
+              <span class="badge-icon">★</span> 5.0 • Verified Renter
+            </div>
+            <div class="video-play-center">
+              <div class="video-play-btn-circle">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                  <polygon points="6 4 20 12 6 20 6 4"></polygon>
+                </svg>
+              </div>
+              <span class="video-play-badge">Watch Video</span>
+            </div>
+            <div class="card-info">
+              <span class="card-tag">MAHINDRA THAR • ARAKU ROAD TRIP</span>
+              <h3>Sai Teja &amp; Friends</h3>
+              <div class="card-rating-stars">★★★★★</div>
+              <p class="card-snippet">&ldquo;Thar was a beast on the Araku ghat roads! Flawless condition, timely
+                delivery at Gannavaram airport. Best in Vijayawada!&rdquo;</p>
+            </div>
+          </div>
+
+          <!-- 3. Hyundai Creta Business Trip Review -->
+          <div class="testimonial-video-card"
+            onclick="openVideoModal('Dr. Sandeep Kumar', 'Hyundai Creta Automatic', 'Amaravati & Local Commute', '5.0', 'Booked Creta Automatic for 4 days for hospital visits and meetings across Vijayawada and Guntur. Smooth booking process, clean interior, and transparent fuel policy. 10/10 service!', 'cars/CRETA.jpeg', 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4')">
+            <img src="cars/CRETA.jpeg" alt="Hyundai Creta Customer Testimonial" loading="lazy">
+            <div class="card-gradient"></div>
+            <div class="card-badge">
+              <span class="badge-icon">★</span> 5.0 • Google Review
+            </div>
+            <div class="video-play-center">
+              <div class="video-play-btn-circle">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                  <polygon points="6 4 20 12 6 20 6 4"></polygon>
+                </svg>
+              </div>
+              <span class="video-play-badge">Watch Video</span>
+            </div>
+            <div class="card-info">
+              <span class="card-tag">HYUNDAI CRETA • BUSINESS &amp; LOCAL</span>
+              <h3>Dr. Sandeep Kumar</h3>
+              <div class="card-rating-stars">★★★★★</div>
+              <p class="card-snippet">&ldquo;Booked Creta Automatic for 4 days. Smooth booking process, clean interior,
+                and transparent fuel policy. 10/10 service!&rdquo;</p>
+            </div>
+          </div>
+
+          <!-- 4. Kia Carens Car with Driver Review -->
+          <div class="testimonial-video-card"
+            onclick="openVideoModal('Venkatesh & Parents', 'Kia Carens (With Driver)', 'Tirupati Pilgrimage Trip', '5.0', 'Booked Kia Carens with driver for my elderly parents to Tirupati. Driver was respectful, safe, courteous, and took care of all parking and toll gates without hassle. Truly grateful!', 'cars/KIA Carens.jpeg', 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4')">
+            <img src="cars/KIA Carens.jpeg" alt="Kia Carens Driver Package Testimonial" loading="lazy">
+            <div class="card-gradient"></div>
+            <div class="card-badge">
+              <span class="badge-icon">★</span> 5.0 • Car with Driver
+            </div>
+            <div class="video-play-center">
+              <div class="video-play-btn-circle">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                  <polygon points="6 4 20 12 6 20 6 4"></polygon>
+                </svg>
+              </div>
+              <span class="video-play-badge">Watch Video</span>
+            </div>
+            <div class="card-info">
+              <span class="card-tag">KIA CARENS • TIRUPATI PILGRIMAGE</span>
+              <h3>Venkatesh &amp; Parents</h3>
+              <div class="card-rating-stars">★★★★★</div>
+              <p class="card-snippet">&ldquo;Took Carens with driver for my elderly parents to Tirupati. Driver was
+                respectful, safe, and knew all the best routes. Truly grateful!&rdquo;</p>
+            </div>
+          </div>
+
+          <!-- 5. Maruti Swift Automatic Review -->
+          <div class="testimonial-video-card"
+            onclick="openVideoModal('Ananya Sharma', 'Maruti Swift Automatic', 'Weekend Trip to Suryalanka', '5.0', 'Swift was super peppy, fuel efficient, and very easy to maneuver. Doorstep handover took just 5 minutes with basic KYC. Bezawada Car Rentals is my top recommendation for self-drive in AP.', 'cars/SWIFT.jpeg', 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4')">
+            <img src="cars/SWIFT.jpeg" alt="Maruti Swift Testimonial" loading="lazy">
+            <div class="card-gradient"></div>
+            <div class="card-badge">
+              <span class="badge-icon">★</span> 5.0 • Verified Renter
+            </div>
+            <div class="video-play-center">
+              <div class="video-play-btn-circle">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                  <polygon points="6 4 20 12 6 20 6 4"></polygon>
+                </svg>
+              </div>
+              <span class="video-play-badge">Watch Video</span>
+            </div>
+            <div class="card-info">
+              <span class="card-tag">MARUTI SWIFT • WEEKEND GETAWAY</span>
+              <h3>Ananya Sharma</h3>
+              <div class="card-rating-stars">★★★★★</div>
+              <p class="card-snippet">&ldquo;Swift was super peppy and fuel efficient. Doorstep handover took just 5
+                minutes. Bezawada Car Rentals is my go-to choice!&rdquo;</p>
+            </div>
+          </div>
+
+          <!-- 6. Toyota Fortuner Luxury Wedding Review -->
+          <div class="testimonial-video-card"
+            onclick="openVideoModal('Chaitanya Varma', 'Toyota Fortuner 4x4', 'Luxury Wedding Convoy', '5.0', 'Booked Fortuner for a VIP family wedding. Car arrived spotlessly clean with ribbons ready. Their customer support team is extremely polite and professional. Will book again!', 'cars/FORTUNER.jpeg', 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4')">
+            <img src="cars/FORTUNER.jpeg" alt="Toyota Fortuner Customer Testimonial" loading="lazy">
+            <div class="card-gradient"></div>
+            <div class="card-badge">
+              <span class="badge-icon">★</span> 5.0 • VIP Rental
+            </div>
+            <div class="video-play-center">
+              <div class="video-play-btn-circle">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                  <polygon points="6 4 20 12 6 20 6 4"></polygon>
+                </svg>
+              </div>
+              <span class="video-play-badge">Watch Video</span>
+            </div>
+            <div class="card-info">
+              <span class="card-tag">FORTUNER 4X4 • LUXURY WEDDING CONVOY</span>
+              <h3>Chaitanya Varma</h3>
+              <div class="card-rating-stars">★★★★★</div>
+              <p class="card-snippet">&ldquo;Booked Fortuner for a VIP family wedding. Car arrived spotlessly clean with
+                flower ribbons ready. Highly professional team!&rdquo;</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Marquee Group 2 (Clone for 100% Seamless Infinite Left Loop) -->
+        <div class="testimonials-marquee-group" aria-hidden="true">
+
+          <!-- 1. Innova Crysta Family Review -->
+          <div class="testimonial-video-card"
+            onclick="openVideoModal('Karthik Varma & Family', 'Toyota Innova Crysta', 'Hyderabad Family Vacation', '5.0', 'Doorstep delivery at Benz Circle was right on the dot! Spotless Innova Crysta, zero deposit & unlimited kms made our Hyderabad vacation totally stress-free. Driving through the Vijayawada-Hyderabad expressway was pure joy.', 'assets/images/reviews/review_innova.jpg', 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4')">
+            <img src="assets/images/reviews/review_innova.jpg" alt="Toyota Innova Crysta Customer Review in Vijayawada"
+              loading="lazy">
+            <div class="card-gradient"></div>
+            <div class="card-badge">
+              <span class="badge-icon">★</span> 5.0 • Google Review
+            </div>
+            <div class="video-play-center">
+              <div class="video-play-btn-circle">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                  <polygon points="6 4 20 12 6 20 6 4"></polygon>
+                </svg>
+              </div>
+              <span class="video-play-badge">Watch Video</span>
+            </div>
+            <div class="card-info">
+              <span class="card-tag">INNOVA CRYSTA • HYDERABAD FAMILY TRIP</span>
+              <h3>Karthik Varma &amp; Family</h3>
+              <div class="card-rating-stars">★★★★★</div>
+              <p class="card-snippet">&ldquo;Spotless Innova Crysta delivered right at Benz Circle. Zero deposit &amp;
+                unlimited kms made our Hyderabad vacation amazing!&rdquo;</p>
+            </div>
+          </div>
+
+          <!-- 2. Mahindra Thar 4x4 Road Trip Review -->
+          <div class="testimonial-video-card"
+            onclick="openVideoModal('Sai Teja & Friends', 'Mahindra Thar 4x4', 'Araku Valley Road Trip', '5.0', 'Thar was an absolute beast on the Araku ghat roads! Flawless mechanical condition, timely pickup at Gannavaram airport, and no kilometer restrictions. Bezawada Car Rentals is undoubtedly the best in Andhra.', 'cars/THAR.jpeg', 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4')">
+            <img src="cars/THAR.jpeg" alt="Mahindra Thar 4x4 Customer Review" loading="lazy">
+            <div class="card-gradient"></div>
+            <div class="card-badge">
+              <span class="badge-icon">★</span> 5.0 • Verified Renter
+            </div>
+            <div class="video-play-center">
+              <div class="video-play-btn-circle">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                  <polygon points="6 4 20 12 6 20 6 4"></polygon>
+                </svg>
+              </div>
+              <span class="video-play-badge">Watch Video</span>
+            </div>
+            <div class="card-info">
+              <span class="card-tag">MAHINDRA THAR • ARAKU ROAD TRIP</span>
+              <h3>Sai Teja &amp; Friends</h3>
+              <div class="card-rating-stars">★★★★★</div>
+              <p class="card-snippet">&ldquo;Thar was a beast on the Araku ghat roads! Flawless condition, timely
+                delivery at Gannavaram airport. Best in Vijayawada!&rdquo;</p>
+            </div>
+          </div>
+
+          <!-- 3. Hyundai Creta Business Trip Review -->
+          <div class="testimonial-video-card"
+            onclick="openVideoModal('Dr. Sandeep Kumar', 'Hyundai Creta Automatic', 'Amaravati & Local Commute', '5.0', 'Booked Creta Automatic for 4 days for hospital visits and meetings across Vijayawada and Guntur. Smooth booking process, clean interior, and transparent fuel policy. 10/10 service!', 'cars/CRETA.jpeg', 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4')">
+            <img src="cars/CRETA.jpeg" alt="Hyundai Creta Customer Testimonial" loading="lazy">
+            <div class="card-gradient"></div>
+            <div class="card-badge">
+              <span class="badge-icon">★</span> 5.0 • Google Review
+            </div>
+            <div class="video-play-center">
+              <div class="video-play-btn-circle">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                  <polygon points="6 4 20 12 6 20 6 4"></polygon>
+                </svg>
+              </div>
+              <span class="video-play-badge">Watch Video</span>
+            </div>
+            <div class="card-info">
+              <span class="card-tag">HYUNDAI CRETA • BUSINESS &amp; LOCAL</span>
+              <h3>Dr. Sandeep Kumar</h3>
+              <div class="card-rating-stars">★★★★★</div>
+              <p class="card-snippet">&ldquo;Booked Creta Automatic for 4 days. Smooth booking process, clean interior,
+                and transparent fuel policy. 10/10 service!&rdquo;</p>
+            </div>
+          </div>
+
+          <!-- 4. Kia Carens Car with Driver Review -->
+          <div class="testimonial-video-card"
+            onclick="openVideoModal('Venkatesh & Parents', 'Kia Carens (With Driver)', 'Tirupati Pilgrimage Trip', '5.0', 'Booked Kia Carens with driver for my elderly parents to Tirupati. Driver was respectful, safe, courteous, and took care of all parking and toll gates without hassle. Truly grateful!', 'cars/KIA Carens.jpeg', 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4')">
+            <img src="cars/KIA Carens.jpeg" alt="Kia Carens Driver Package Testimonial" loading="lazy">
+            <div class="card-gradient"></div>
+            <div class="card-badge">
+              <span class="badge-icon">★</span> 5.0 • Car with Driver
+            </div>
+            <div class="video-play-center">
+              <div class="video-play-btn-circle">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                  <polygon points="6 4 20 12 6 20 6 4"></polygon>
+                </svg>
+              </div>
+              <span class="video-play-badge">Watch Video</span>
+            </div>
+            <div class="card-info">
+              <span class="card-tag">KIA CARENS • TIRUPATI PILGRIMAGE</span>
+              <h3>Venkatesh &amp; Parents</h3>
+              <div class="card-rating-stars">★★★★★</div>
+              <p class="card-snippet">&ldquo;Took Carens with driver for my elderly parents to Tirupati. Driver was
+                respectful, safe, and knew all the best routes. Truly grateful!&rdquo;</p>
+            </div>
+          </div>
+
+          <!-- 5. Maruti Swift Automatic Review -->
+          <div class="testimonial-video-card"
+            onclick="openVideoModal('Ananya Sharma', 'Maruti Swift Automatic', 'Weekend Trip to Suryalanka', '5.0', 'Swift was super peppy, fuel efficient, and very easy to maneuver. Doorstep handover took just 5 minutes with basic KYC. Bezawada Car Rentals is my top recommendation for self-drive in AP.', 'cars/SWIFT.jpeg', 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4')">
+            <img src="cars/SWIFT.jpeg" alt="Maruti Swift Testimonial" loading="lazy">
+            <div class="card-gradient"></div>
+            <div class="card-badge">
+              <span class="badge-icon">★</span> 5.0 • Verified Renter
+            </div>
+            <div class="video-play-center">
+              <div class="video-play-btn-circle">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                  <polygon points="6 4 20 12 6 20 6 4"></polygon>
+                </svg>
+              </div>
+              <span class="video-play-badge">Watch Video</span>
+            </div>
+            <div class="card-info">
+              <span class="card-tag">MARUTI SWIFT • WEEKEND GETAWAY</span>
+              <h3>Ananya Sharma</h3>
+              <div class="card-rating-stars">★★★★★</div>
+              <p class="card-snippet">&ldquo;Swift was super peppy and fuel efficient. Doorstep handover took just 5
+                minutes. Bezawada Car Rentals is my go-to choice!&rdquo;</p>
+            </div>
+          </div>
+
+          <!-- 6. Toyota Fortuner Luxury Wedding Review -->
+          <div class="testimonial-video-card"
+            onclick="openVideoModal('Chaitanya Varma', 'Toyota Fortuner 4x4', 'Luxury Wedding Convoy', '5.0', 'Booked Fortuner for a VIP family wedding. Car arrived spotlessly clean with ribbons ready. Their customer support team is extremely polite and professional. Will book again!', 'cars/FORTUNER.jpeg', 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4')">
+            <img src="cars/FORTUNER.jpeg" alt="Toyota Fortuner Customer Testimonial" loading="lazy">
+            <div class="card-gradient"></div>
+            <div class="card-badge">
+              <span class="badge-icon">★</span> 5.0 • VIP Rental
+            </div>
+            <div class="video-play-center">
+              <div class="video-play-btn-circle">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                  <polygon points="6 4 20 12 6 20 6 4"></polygon>
+                </svg>
+              </div>
+              <span class="video-play-badge">Watch Video</span>
+            </div>
+            <div class="card-info">
+              <span class="card-tag">FORTUNER 4X4 • LUXURY WEDDING CONVOY</span>
+              <h3>Chaitanya Varma</h3>
+              <div class="card-rating-stars">★★★★★</div>
+              <p class="card-snippet">&ldquo;Booked Fortuner for a VIP family wedding. Car arrived spotlessly clean with
+                flower ribbons ready. Highly professional team!&rdquo;</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Video Testimonial Modal Dialog -->
+  <div class="video-modal-overlay" id="videoModalOverlay" role="dialog" aria-modal="true" aria-hidden="true"
+    onclick="handleModalBackdropClick(event)">
+    <div class="video-modal-box">
+      <button class="btn-close-modal" type="button" aria-label="Close video" onclick="closeVideoModal()">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="video-player-container">
+        <video id="modalVideoPlayer" controls playsinline preload="auto" poster="">
+          <source id="modalVideoSource" src="" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <iframe id="modalVideoIframe" style="display:none;" src="" title="Customer Road Trip Video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+      <div class="video-modal-footer">
+        <div class="modal-author-info">
+          <h4 id="modalCustomerName">Customer Story</h4>
+          <p>
+            <span class="modal-tag" id="modalCarModel">Toyota Innova</span> •
+            <span id="modalTripRoute">Hyderabad Road Trip</span> •
+            <span style="color:#F59E0B;">★★★★★</span>
+          </p>
+          <p id="modalQuoteSnippet" style="margin-top:6px; color:#E2E8F0; font-size:13px; font-style:italic;"></p>
+        </div>
+        <a href="javascript:void(0)" onclick="closeVideoModal(); scrollToBooking();" class="btn-modal-book-now">
+          Book This Car
+          <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.2" fill="none">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       SECTION 7: CTA SECTION (Ready to Explore Vijayawada & Beyond? Direct WhatsApp & 24/7 Call)
        ========================================================================== -->
   <section class="booking-cta-section" id="ctaSection" aria-label="Book Car Rental Now">
     <div class="cta-banner-card">
@@ -2262,8 +2634,7 @@
             <li><a href="contact.html">Contact Us</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="terms.html">Terms and Conditions <span class="badge-mini">Popular</span></a></li>
-            <li><a href="terms.html">Privacy Policy</a></li>
-            <li><a href="blog.html">Blog</a></li>
+
           </ul>
         </div>
 
@@ -2307,12 +2678,17 @@
 
         <div class="footer-col">
           <h3 class="footer-col-title">Get In Touch</h3>
-          <a href="mailto:support@bezawadacarrentals.com" class="footer-contact-row">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-              <polyline points="22,6 12,13 2,6"></polyline>
+          <!-- Header Right CTA Buttons -->
+          <a href="https://wa.me/919393093095?text=Hello%20Bezawada%20Car%20Rentals!%20I%20would%20like%20to%20inquire%20about%20booking%20a%20car."
+            target="_blank" rel="noopener noreferrer" class="action-btn hotline-btn"
+            title="Call or WhatsApp Bezawada Car Rentals">
+            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+              </path>
             </svg>
-            <span>support@bezawadacarrentals.com</span>
+            <span class="hotline-text"> Contact Us </span>
           </a>
         </div>
       </div>
@@ -2321,91 +2697,31 @@
     <!-- Footer Bottom Bar -->
     <div class="footer-bottom-bar">
       <div class="footer-bottom-inner">
-        <div class="footer-copyright">
+        <div class="footer-copyright" style="color: #E2E8F0;">
           © 2026 Bezawada Car Rentals. All rights reserved.
         </div>
-        <div class="footer-bottom-links">
-          <a href="terms.html">Terms &amp; Conditions</a>
-          <a href="about.html">About Us</a>
-          <a href="contact.html">Contact Us</a>
-          <a href="blog.html">Blog</a>
+        <div class="footer-bottom-links" style="color: #E2E8F0;">
+          <p>Design & Developed by : <a href="https://www.peakoo.agency" target="_blank">
+              <b>Peakoo Agency</b></a>
+          </p>
           <button class="btn-back-to-top" type="button" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
             aria-label="Back to top">
             <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"
               stroke-linecap="round" stroke-linejoin="round">
               <polyline points="18 15 12 9 6 15"></polyline>
             </svg>
-            <span>Top</span>
+            <span>TOP</span>
           </button>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- ==========================================================================
-       FLOATING ACTION BUTTONS ON SCROLL (Bottom Center, Within Cars Section)
-       ========================================================================== -->
-  <div class="floating-scroll-actions" id="floatingScrollActions" role="region" aria-label="Quick Service Selection">
-    <div class="floating-scroll-card" id="scrollTabsCard">
-      <div class="scroll-tab-glider" id="scrollTabGlider"></div>
-      <button class="scroll-tab-btn active" id="scrollTabSelfDrive" type="button"
-        onclick="setBookingMode('Self Drive')">
-        <span class="scroll-tab-title">Self Drive</span>
-        <span class="scroll-tab-sub">Short trips, upto 7 days</span>
-      </button>
-      <button class="scroll-tab-btn" id="scrollTabWithDriver" type="button" onclick="setBookingMode('With Driver')">
-        <span class="scroll-tab-title">Rent a Car (with driver)</span>
-        <span class="scroll-tab-sub">Car with Driver</span>
-      </button>
-    </div>
-  </div>
 
-  <!-- Quick Hubs Modal / Dropdown info -->
-  <div class="city-selector-modal" id="cityModal">
-    <div class="city-modal-content">
-      <div class="city-modal-header">
-        <h3>Bezawada Car Rentals Service Hubs</h3>
-        <button class="modal-close-btn" id="modalCloseBtn">&times;</button>
-      </div>
-      <p class="city-modal-desc">Pickup or get doorstep delivery at all prime locations in Vijayawada &amp; Amaravati
-        Capital Region:</p>
-      <div class="city-hubs-grid">
-        <div class="hub-item" onclick="selectHubAndScroll('Gannavaram Airport')">
-          <strong>Gannavaram Airport (VGA)</strong>
-          <span>Flight arrival meet &amp; greet</span>
-        </div>
-        <div class="hub-item" onclick="selectHubAndScroll('Benz Circle')">
-          <strong>Benz Circle</strong>
-          <span>MG Road Central Hub</span>
-        </div>
-        <div class="hub-item" onclick="selectHubAndScroll('Vijayawada Railway Station')">
-          <strong>Vijayawada Junction (BZA)</strong>
-          <span>PF 1 &amp; PF 10 Handover</span>
-        </div>
-        <div class="hub-item" onclick="selectHubAndScroll('Governorpet / Besant Road')">
-          <strong>PNBS Bus Station / Governorpet</strong>
-          <span>Pandit Nehru Bus Station Hub</span>
-        </div>
-        <div class="hub-item" onclick="selectHubAndScroll('Auto Nagar')">
-          <strong>Auto Nagar / Poranki</strong>
-          <span>Bandar Road corridor</span>
-        </div>
-        <div class="hub-item" onclick="selectHubAndScroll('Doorstep Delivery (Vijayawada)')">
-          <strong>Doorstep Delivery</strong>
-          <span>Anywhere in Vijayawada</span>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- Live Toast Notification for Search Action -->
-  <div class="action-toast" id="actionToast">
-    <div class="toast-icon">✓</div>
-    <div class="toast-body">
-      <strong id="toastTitle">Searching Available Cars</strong>
-      <span id="toastMsg">Checking fleet availability across Vijayawada...</span>
-    </div>
-  </div>
+
+
+
 
   <!-- Interactive JavaScript -->
   <script src="js/main.js"></script>
@@ -2741,6 +3057,92 @@
 
       const whatsappUrl = `https://wa.me/919393093095?text=${encodeURIComponent(message)}`;
       window.open(whatsappUrl, '_blank');
+    }
+
+    // Video Modal Handlers
+    function openVideoModal(author, car, route, rating, quote, poster, videoUrl) {
+      const modal = document.getElementById('videoModalOverlay');
+      const videoPlayer = document.getElementById('modalVideoPlayer');
+      const iframe = document.getElementById('modalVideoIframe');
+      const authorEl = document.getElementById('modalCustomerName');
+      const carEl = document.getElementById('modalCarModel');
+      const routeEl = document.getElementById('modalTripRoute');
+      const quoteEl = document.getElementById('modalQuoteSnippet');
+
+      if (authorEl) authorEl.textContent = author;
+      if (carEl) carEl.textContent = car;
+      if (routeEl) routeEl.textContent = route;
+      if (quoteEl) quoteEl.textContent = `"${quote}"`;
+
+      if (videoUrl.endsWith('.mp4') || videoUrl.includes('.mp4')) {
+        if (iframe) {
+          iframe.style.display = 'none';
+          iframe.src = '';
+        }
+        if (videoPlayer) {
+          videoPlayer.style.display = 'block';
+          videoPlayer.poster = poster || '';
+          videoPlayer.src = videoUrl;
+          videoPlayer.load();
+          videoPlayer.play().catch(e => console.log('Autoplay handled:', e));
+        }
+      } else {
+        if (videoPlayer) {
+          videoPlayer.pause();
+          videoPlayer.style.display = 'none';
+        }
+        if (iframe) {
+          iframe.style.display = 'block';
+          const embedUrl = videoUrl.includes('?') ? `${videoUrl}&autoplay=1` : `${videoUrl}?autoplay=1`;
+          iframe.src = embedUrl;
+        }
+      }
+
+      if (modal) {
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeVideoModal() {
+      const modal = document.getElementById('videoModalOverlay');
+      const videoPlayer = document.getElementById('modalVideoPlayer');
+      const iframe = document.getElementById('modalVideoIframe');
+
+      if (videoPlayer) {
+        videoPlayer.pause();
+        videoPlayer.src = '';
+      }
+      if (iframe) {
+        iframe.src = '';
+      }
+      if (modal) {
+        modal.classList.remove('is-open');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+    }
+
+    function handleModalBackdropClick(e) {
+      if (e.target && e.target.id === 'videoModalOverlay') {
+        closeVideoModal();
+      }
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeVideoModal();
+    });
+
+    // Pause testimonials marquee on mobile touch or hover
+    const testimonialsTrack = document.getElementById('testimonialsMarqueeTrack');
+    if (testimonialsTrack) {
+      testimonialsTrack.addEventListener('touchstart', () => {
+        testimonialsTrack.classList.add('is-paused');
+      }, { passive: true });
+      testimonialsTrack.addEventListener('touchend', () => {
+        setTimeout(() => testimonialsTrack.classList.remove('is-paused'), 1500);
+      }, { passive: true });
     }
   </script>
 </body>
