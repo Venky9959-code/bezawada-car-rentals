@@ -759,15 +759,15 @@ select {
   padding: 10px 0 10px;
 }
 
-/* Rating Block (Placed on Left in Open Sky for Perfect Contrast) */
+/* Rating Block (Placed on Right Side) */
 .revv-rating-block {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  margin-left: 10px;
-  margin-right: auto;
+  align-items: flex-end;
+  text-align: right;
+  margin-left: auto;
+  margin-right: 15px;
   max-width: 540px;
   width: 100%;
   min-height: 140px;
@@ -778,8 +778,8 @@ select {
 .header-slide-content {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
+  align-items: flex-end;
+  text-align: right;
   width: 100%;
   will-change: transform, opacity;
 }
@@ -788,7 +788,7 @@ select {
 .header-slide-content.slide-out-left {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100%;
   transform: translateX(-60px);
   opacity: 0;
@@ -796,7 +796,7 @@ select {
   pointer-events: none;
 }
 
-/* Incoming intro slides in smoothly and settles left-aligned */
+/* Incoming intro slides in smoothly and settles right-aligned */
 .header-slide-content.slide-in-right {
   animation: introSlideInRight 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
@@ -817,7 +817,7 @@ select {
 .header-slide-content.slide-out-right {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100%;
   transform: translateX(60px);
   opacity: 0;
@@ -842,9 +842,10 @@ select {
 }
 
 .rating-badge-card {
+  align-self: flex-end;
   display: inline-flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-end;
   background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -890,7 +891,8 @@ select {
   margin-bottom: 2px;
   letter-spacing: -0.5px;
   line-height: 1.25;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.85);
+  text-shadow: 0 1px 4px rgba(255, 255, 255, 0.95), 0 0 12px rgba(255, 255, 255, 0.85);
+  text-align: right;
 }
 
 .headline-pill {
@@ -902,9 +904,9 @@ select {
   color: #08919A;
   font-weight: 800;
   margin-right: 4px;
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .italic-serif {
@@ -918,17 +920,19 @@ select {
   position: relative;
   display: inline-block;
   font-size: 1.05rem;
-  font-weight: 600;
-  color: #334155;
+  font-weight: 700;
+  color: #0F172A;
   margin-top: 8px;
   line-height: 1.35;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.85);
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.95), 0 0 10px rgba(255, 255, 255, 0.9);
+  text-align: right;
 }
 
 .rating-subtext::after {
   content: '';
   position: absolute;
-  left: 0;
+  right: 0;
+  left: auto;
   bottom: -4px;
   width: 44px;
   height: 2.5px;
@@ -1081,7 +1085,10 @@ select {
 
 @media (max-width: 991px) {
   .revv-rating-block {
-    margin-left: 0;
+    margin-left: auto;
+    margin-right: 0;
+    align-items: flex-end;
+    text-align: right;
   }
 
   .rating-headline {
