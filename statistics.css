@@ -38,7 +38,8 @@ body:not(:has(.hero-section)) {
     border: 1px solid rgba(8, 145, 154, 0.2);
 }
 
-.stats-header h1 {
+.stats-header h1,
+.stats-header h2 {
     font-family: 'Outfit', sans-serif;
     font-size: 38px;
     font-weight: 700;
@@ -92,7 +93,8 @@ body:not(:has(.hero-section)) {
 }
 
 /* Numbers */
-.stat-box h2 {
+.stat-box h2,
+.stat-box .counter {
     font-family: 'Outfit', sans-serif;
     font-size: 64px;
     line-height: 1;
@@ -108,11 +110,13 @@ body:not(:has(.hero-section)) {
     font-variant-numeric: tabular-nums;
 }
 
-.stat-box:hover h2 {
+.stat-box:hover h2,
+.stat-box:hover .counter {
     transform: scale(1.05);
 }
 
-.stat-box h2.counted {
+.stat-box h2.counted,
+.stat-box .counter.counted {
     animation: counterPulse 0.45s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -145,7 +149,8 @@ body:not(:has(.hero-section)) {
         padding: 45px 20px 55px;
     }
 
-    .stats-header h1 {
+    .stats-header h1,
+    .stats-header h2 {
         font-size: 30px;
     }
 
@@ -172,7 +177,8 @@ body:not(:has(.hero-section)) {
         border-bottom: none;
     }
 
-    .stat-box h2 {
+    .stat-box h2,
+    .stat-box .counter {
         font-size: 54px;
     }
 
@@ -194,7 +200,8 @@ body:not(:has(.hero-section)) {
         margin-bottom: 30px;
     }
 
-    .stats-header h1 {
+    .stats-header h1,
+    .stats-header h2 {
         font-size: 25px;
     }
 
@@ -213,7 +220,8 @@ body:not(:has(.hero-section)) {
         border-bottom: none;
     }
 
-    .stat-box h2 {
+    .stat-box h2,
+    .stat-box .counter {
         font-size: 48px;
         margin-bottom: 12px;
     }
