@@ -18,7 +18,7 @@
     rel="stylesheet">
 
   <!-- Unified Stylesheets in requested order -->
-  <link rel="stylesheet" href="css/style.css?v=1.2">
+  <link rel="stylesheet" href="css/style.css?v=1.6">
   <link rel="stylesheet" href="cars_booking.css">
   <link rel="stylesheet" href="statistics.css">
   <link rel="stylesheet" href="best_places.css">
@@ -102,33 +102,130 @@
     </div>
   </div>
 
-  <!-- Main Hero Section -->
-  <main class="hero-section">
+  <!-- =====================================
+       HERO SECTION
+       ===================================== -->
+  <section class="hero" id="hero">
 
+    <!-- Background Image -->
+    <div class="hero-bg"></div>
 
-    <!-- Hero Stage Area with Vijayawada Background & Interactive Cards -->
-    <!-- Hero Stage Area: Exact Banner Implementation -->
-    <div class="hero-stage">
-      <div class="hero-exact-banner-container">
-        <img src="assets/images/hero-exact.png"
-          alt="Best Self Drive Car Rentals Across Vijayawada - Easy, Affordable &amp; Flexible. Your Journey, Your Rules."
-          class="hero-exact-banner-img" id="heroBgImage">
+    <!-- =================================
+         MAIN CONTENT
+    ================================== -->
+    <div class="hero-content">
 
-        <!-- Interactive Hotspot for 'Find Your Car →' Button -->
-        <a href="#searchWidget" class="hero-find-car-hotspot" onclick="scrollToBooking()"
-          title="Find Your Car in Vijayawada" aria-label="Find Your Car">
-          <span class="sr-only">Find Your Car</span>
+      <!-- LEFT TEXT -->
+      <div class="hero-text">
+
+        <h1 class="hero-title">
+          <span class="line-one">Bezawada</span>
+          <span class="line-two">Car Rentals</span>
+        </h1>
+
+        <h2 class="location-title"></h2>
+
+        <div class="hero-description">
+          <strong>Self Drive Cars & Car Travel</strong>
+        </div>
+
+        <!-- BUTTON -->
+        <a href="#cars" class="find-car" onclick="scrollToBooking()">
+          <span>Find Your Car</span>
+          <span class="find-car-arrow">→</span>
         </a>
+
+        <br><br><br>
+
+        <!-- =========================================
+             STATS (Immediately Below Find Your Car Button)
+             ========================================= -->
+        <div class="hero-stats-strip">
+          <div class="hero-stat-pill">
+            <div class="hero-stat-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 11l1.5-4.5A2 2 0 0 1 8.4 5h7.2a2 2 0 0 1 1.9 1.5L19 11" />
+                <rect x="3" y="11" width="18" height="8" rx="2" />
+                <circle cx="7.5" cy="15" r="1.5" fill="currentColor" />
+                <circle cx="16.5" cy="15" r="1.5" fill="currentColor" />
+              </svg>
+            </div>
+            <div class="hero-stat-info">
+              <strong>Wide Range</strong>
+              <span>of New Cars</span>
+            </div>
+          </div>
+
+          <div class="hero-stat-divider"></div>
+
+          <div class="hero-stat-pill">
+            <div class="hero-stat-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2" />
+                <circle cx="10" cy="7" r="4" />
+                <path d="M21 21v-2a4 4 0 0 0-3-3.85" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+            <div class="hero-stat-info">
+              <strong>10 Lakh+</strong>
+              <span>Happy Drivers</span>
+            </div>
+          </div>
+
+          <div class="hero-stat-divider"></div>
+
+          <div class="hero-stat-pill">
+            <div class="hero-stat-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 10.5L12 3l9 7.5V20a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <polyline points="9 22 9 12 15 12 15 22" />
+              </svg>
+            </div>
+            <div class="hero-stat-info">
+              <strong>Home</strong>
+              <span>Delivery</span>
+            </div>
+          </div>
+
+          <div class="hero-stat-divider"></div>
+
+          <div class="hero-stat-pill">
+            <div class="hero-stat-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="14" r="8" />
+                <line x1="12" y1="2" x2="12" y2="6" />
+                <line x1="12" y1="14" x2="15" y2="11" />
+              </svg>
+            </div>
+            <div class="hero-stat-info">
+              <strong>60 Crore+</strong>
+              <span>Kms Driven</span>
+            </div>
+          </div>
+        </div>
+
       </div>
 
-      <!-- Semantic Screen Reader & SEO Metadata -->
-      <div class="sr-only">
-        <h1>Best Self Drive Car Rentals Across Vijayawada</h1>
-        <p>Explore Vijayawada - Easy. Affordable. Flexible. Your Journey, Your Rules. Wide Range of New Cars, 10 Lakh+
-          Happy Drivers, Home Delivery, 60 Crore+ Kms Driven. Rated 4.6/5 by 100K+ Happy Drivers.</p>
+      <!-- =================================
+           RATING
+      ================================== -->
+      <div class="rating">
+        <div class="rating-main">
+          <span class="rating-star">★</span>
+          <span class="rating-number">4.6/5</span>
+        </div>
+        <div class="rating-subtitle">100K+ Happy Drivers</div>
       </div>
+
     </div>
-  </main>
+
+  </section>
+  <div id="cars"></div>
 
   <!-- ==========================================================================
        SECTION 2: CAR BOOKING.HTML (2-Option Zoomcar Switcher + Search + Popular Cars Horizontal Slider)

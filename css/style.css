@@ -426,47 +426,498 @@ select {
   background-color: var(--color-primary-light);
 }
 
-/* Hero Stage: Exact Banner Implementation */
-.hero-stage {
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero {
   position: relative;
+  width: calc(100% - 48px);
   max-width: 1400px;
-  margin: 0 auto;
-  border-radius: var(--radius-xl);
-  overflow: hidden;
-  box-shadow: 0 12px 38px rgba(0, 0, 0, 0.08);
-}
-
-.hero-exact-banner-container {
-  position: relative;
-  width: 100%;
-  line-height: 0;
-  overflow: hidden;
-  border-radius: var(--radius-xl);
-}
-
-.hero-exact-banner-img {
-  width: 100%;
+  min-height: 680px;
   height: auto;
-  display: block;
-  object-fit: contain;
+  margin: 18px auto 0;
+  overflow: hidden;
+  border-radius: 28px;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.08);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.hero-find-car-hotspot {
+/* =========================================
+   BACKGROUND
+========================================= */
+
+.hero-bg {
   position: absolute;
-  top: 57.5%;
-  left: 5.5%;
-  width: 20.2%;
-  height: 10.8%;
-  border-radius: 9999px;
-  cursor: pointer;
-  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/images/bg.png");
+  background-image: url("hero-bg.jpg");
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  border-radius: 28px;
+  z-index: 1;
+}
+
+/* =========================================
+   CONTENT WRAPPER
+========================================= */
+
+.hero-content {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  max-width: 1600px;
+  height: 100%;
+  margin: auto;
+  padding-left: 6%;
+  padding-top: 55px;
+  padding-bottom: 55px;
+}
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.hero-text {
+  width: 100%;
+  max-width: 760px;
+}
+
+/* =========================================
+   MAIN TITLE
+========================================= */
+
+.hero-title {
+  margin: 0;
+  padding: 0;
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+}
+
+.hero-title .line-one {
+  display: block;
+  color: #07142e;
+  font-size: clamp(48px, 5vw, 78px);
+  font-weight: 800;
+}
+
+.hero-title .line-two {
+  display: block;
+  color: #079da0;
+  font-size: clamp(48px, 5vw, 78px);
+  font-weight: 800;
+}
+
+/* =========================================
+   LOCATION TEXT
+========================================= */
+
+.location-title {
+  margin-top: 20px;
+  color: #07142e;
+  font-size: clamp(24px, 2.5vw, 37px);
+  font-weight: 700;
+  letter-spacing: 7px;
+}
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.hero-description {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  color: #07142e;
+  font-size: 21px;
+  line-height: 1.25;
+}
+
+.hero-description strong {
+  font-size: 23px;
+  font-weight: 700;
+}
+
+/* =========================================
+   FIND YOUR CAR BUTTON
+========================================= */
+
+.find-car {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  width: 335px;
+  height: 75px;
+  margin-top: 28px;
+  padding: 0 27px;
+  background: #11a6a9;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 45px;
+  border: 6px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  font-size: 24px;
+  font-weight: 700;
   transition: all 0.25s ease;
 }
 
-.hero-find-car-hotspot:hover {
-  box-shadow: 0 0 25px rgba(8, 145, 154, 0.7);
-  transform: scale(1.02);
+.find-car:hover {
+  background: #078e91;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.20);
 }
+
+.find-car-arrow {
+  font-size: 38px;
+  line-height: 1;
+}
+
+/* =========================================
+   RATING BOX
+========================================= */
+
+.rating {
+  position: absolute;
+  top: 45px;
+  right: 5%;
+  z-index: 10;
+  width: 220px;
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.93);
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.rating-main {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.rating-star {
+  color: #07858d;
+  font-size: 32px;
+  line-height: 1;
+}
+
+.rating-number {
+  color: #07142e;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.rating-subtitle {
+  margin-top: 6px;
+  color: #07142e;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* =========================================
+   HERO STATS STRIP (Immediately Below Find Your Car Button)
+========================================= */
+
+.hero-stats-strip {
+  margin-top: 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 18px;
+  background: rgba(5, 24, 39, 0.82);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+  max-width: 100%;
+}
+
+.hero-stat-pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 0 0 auto;
+}
+
+.hero-stat-icon {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 12px;
+  color: #08919A;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+.hero-stat-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+  font-family: 'Outfit', 'Plus Jakarta Sans', Arial, sans-serif;
+}
+
+.hero-stat-info strong {
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  white-space: nowrap;
+  letter-spacing: -0.2px;
+}
+
+.hero-stat-info span {
+  margin-top: 2px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.hero-stat-divider {
+  width: 1px;
+  height: 32px;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.35);
+  margin: 0 2px;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1200px) {
+  .hero {
+    width: calc(100% - 36px);
+    margin: 14px auto 0;
+  }
+
+  .hero-stats-strip {
+    gap: 12px;
+    padding: 9px 14px;
+  }
+
+  .hero-stat-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+  }
+
+  .hero-stat-info strong {
+    font-size: 13px;
+  }
+
+  .hero-stat-info span {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .hero {
+    width: calc(100% - 28px);
+    border-radius: 24px;
+    margin: 12px auto 0;
+  }
+
+  .hero-bg {
+    border-radius: 24px;
+  }
+
+  .hero-content {
+    padding-left: 5%;
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+
+  .rating {
+    right: 5%;
+    top: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-stats-strip {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 16px;
+    padding: 12px 16px;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .hero-stat-divider {
+    display: none;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+  .hero {
+    width: calc(100% - 20px);
+    min-height: 640px;
+    border-radius: 20px;
+    margin: 10px auto 0;
+  }
+
+  .hero-bg {
+    border-radius: 20px;
+    background-position: 70% bottom;
+  }
+
+  .hero-content {
+    padding: 35px 20px 40px 20px;
+  }
+
+  .hero-text {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-title .line-one,
+  .hero-title .line-two {
+    font-size: 44px;
+  }
+
+  .location-title {
+    font-size: 20px;
+    letter-spacing: 4px;
+    margin-top: 14px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+    margin-top: 14px;
+  }
+
+  .hero-description strong {
+    font-size: 18px;
+  }
+
+  .find-car {
+    width: 270px;
+    height: 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    border-width: 4px;
+  }
+
+  .find-car-arrow {
+    font-size: 28px;
+  }
+
+  .rating {
+    top: auto;
+    bottom: 24px;
+    right: 20px;
+    width: 165px;
+    padding: 10px 14px;
+  }
+
+  .rating-star {
+    font-size: 24px;
+  }
+
+  .rating-number {
+    font-size: 20px;
+  }
+
+  .rating-subtitle {
+    font-size: 11px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+  .hero {
+    width: calc(100% - 16px);
+    min-height: 620px;
+    border-radius: 18px;
+    margin: 8px auto 0;
+  }
+
+  .hero-bg {
+    border-radius: 18px;
+    background-position: 68% bottom;
+  }
+
+  .hero-content {
+    padding-top: 30px;
+    padding-bottom: 35px;
+  }
+
+  .hero-title .line-one,
+  .hero-title .line-two {
+    font-size: 36px;
+    letter-spacing: -1px;
+  }
+
+  .location-title {
+    font-size: 17px;
+    letter-spacing: 3px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .hero-description strong {
+    font-size: 16px;
+  }
+
+  .find-car {
+    width: 240px;
+    height: 54px;
+    font-size: 16px;
+  }
+
+  .hero-stats-strip {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 10px;
+    padding: 10px 12px;
+    max-width: 100%;
+  }
+
+  .hero-stat-icon {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    border-radius: 10px;
+  }
+
+  .hero-stat-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .hero-stat-info strong {
+    font-size: 12px;
+  }
+
+  .hero-stat-info span {
+    font-size: 11px;
+  }
+
+  .rating {
+    bottom: 18px;
+    width: 145px;
+    right: 14px;
+    padding: 8px 12px;
+  }
+}
+
 
 .sr-only {
   position: absolute;
