@@ -822,66 +822,108 @@ select {
 
 @media (max-width: 768px) {
   .hero {
+    display: flex;
+    flex-direction: column;
     width: calc(100% - 20px);
-    min-height: 670px;
-    border-radius: 20px;
+    min-height: 680px;
+    border-radius: 22px;
     margin: 10px auto 0;
   }
 
   .hero-bg {
-    border-radius: 20px;
+    border-radius: 22px;
     background-position: 70% bottom;
   }
 
   .hero-content {
-    padding: 30px 18px 35px 18px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+    min-height: 680px;
+    padding: 80px 18px 18px 18px;
+    box-sizing: border-box;
   }
 
   .hero-text {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
     width: 100%;
     max-width: 100%;
   }
 
-  .hero-title .line-one,
+  .hero-text br {
+    display: none;
+  }
+
+  .hero-title .line-one {
+    font-size: 44px;
+    font-weight: 900;
+    color: #07142e;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 12px rgba(255, 255, 255, 0.95), 0 1px 3px rgba(255, 255, 255, 0.9);
+  }
+
   .hero-title .line-two {
-    font-size: 42px;
+    font-size: 44px;
+    font-weight: 900;
+    color: #057a7d;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 12px rgba(255, 255, 255, 0.95), 0 1px 3px rgba(255, 255, 255, 0.9);
   }
 
   .location-title {
     font-size: 20px;
     letter-spacing: 4px;
-    margin-top: 12px;
+    margin-top: 10px;
   }
 
   .hero-description {
     font-size: 16px;
+    font-weight: 800;
+    color: #07142e;
     margin-top: 12px;
+    text-shadow: 0 1px 8px rgba(255, 255, 255, 0.95);
   }
 
   .hero-description strong {
-    font-size: 18px;
+    font-size: 19px;
+    font-weight: 900;
+    color: #07142e;
+    letter-spacing: 0.3px;
   }
 
   .find-car {
     width: 260px;
     height: 56px;
     font-size: 17px;
-    margin-top: 20px;
+    font-weight: 800;
+    margin-top: 18px;
     border-width: 4px;
+    box-shadow: 0 8px 24px rgba(7, 157, 160, 0.35);
   }
 
   .find-car-arrow {
     font-size: 28px;
   }
 
-  /* Position rating at top right sky area to avoid overlapping stats strip */
+  /* Stats placed at car tyres place (bottom of hero) */
+  .hero-stats-strip {
+    margin-top: auto;
+    margin-bottom: 0;
+    border-radius: 16px;
+  }
+
+  /* Position rating at top right sky area to avoid overlapping */
   .rating {
-    top: 20px;
+    top: 18px;
     bottom: auto;
     right: 18px;
     width: auto;
     padding: 8px 14px;
     border-radius: 14px;
+    z-index: 10;
   }
 
   .rating-main {
@@ -908,25 +950,55 @@ select {
 
 @media (max-width: 500px) {
   .hero {
+    display: flex;
+    flex-direction: column;
     width: calc(100% - 16px);
-    min-height: 650px;
-    border-radius: 18px;
+    min-height: 660px;
+    border-radius: 20px;
     margin: 8px auto 0;
   }
 
   .hero-bg {
-    border-radius: 18px;
+    border-radius: 20px;
     background-position: 68% bottom;
   }
 
   .hero-content {
-    padding: 24px 14px 28px 14px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+    min-height: 660px;
+    padding: 78px 12px 14px 12px;
+    box-sizing: border-box;
   }
 
-  .hero-title .line-one,
-  .hero-title .line-two {
-    font-size: 34px;
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-text br {
+    display: none;
+  }
+
+  .hero-title .line-one {
+    font-size: 38px;
     letter-spacing: -0.5px;
+    font-weight: 900;
+    color: #07142e;
+    text-shadow: 0 2px 12px rgba(255, 255, 255, 0.95), 0 1px 3px rgba(255, 255, 255, 0.9);
+  }
+
+  .hero-title .line-two {
+    font-size: 38px;
+    letter-spacing: -0.5px;
+    font-weight: 900;
+    color: #057a7d;
+    text-shadow: 0 2px 12px rgba(255, 255, 255, 0.95), 0 1px 3px rgba(255, 255, 255, 0.9);
   }
 
   .location-title {
@@ -936,32 +1008,42 @@ select {
   }
 
   .hero-description {
-    font-size: 14px;
+    font-size: 14.5px;
+    font-weight: 800;
+    color: #07142e;
     margin-top: 10px;
+    text-shadow: 0 1px 8px rgba(255, 255, 255, 0.95);
   }
 
   .hero-description strong {
-    font-size: 15.5px;
+    font-size: 17px;
+    font-weight: 900;
+    color: #07142e;
+    letter-spacing: 0.3px;
   }
 
   .find-car {
     width: 220px;
     height: 50px;
     font-size: 15px;
+    font-weight: 800;
     margin-top: 16px;
     padding: 0 18px;
+    box-shadow: 0 8px 24px rgba(7, 157, 160, 0.35);
   }
 
   .find-car-arrow {
     font-size: 24px;
   }
 
+  /* Stats placed at car tyres place (bottom of hero) */
   .hero-stats-strip {
     grid-template-columns: repeat(2, 1fr);
     gap: 6px 8px;
     padding: 8px 10px;
     max-width: 100%;
-    margin-top: 16px;
+    margin-top: auto;
+    margin-bottom: 0;
     border-radius: 14px;
   }
 
@@ -985,10 +1067,12 @@ select {
 
   .hero-stat-info strong {
     font-size: 11.5px;
+    font-weight: 800;
   }
 
   .hero-stat-info span {
     font-size: 10px;
+    font-weight: 600;
   }
 
   .rating {
@@ -998,6 +1082,7 @@ select {
     width: auto;
     padding: 6px 10px;
     border-radius: 10px;
+    z-index: 10;
   }
 
   .rating-star {
@@ -1012,6 +1097,9 @@ select {
     font-size: 9.5px;
   }
 }
+
+
+
 
 
 .sr-only {
